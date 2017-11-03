@@ -100,9 +100,9 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a data-cont="木庄网络博客" title="木庄网络博客" href="index.html">首页</a></li>
-          <li><a data-cont="列表页" title="列表页" href="list.html">列表页</a></li>
-          <li><a data-cont="详细页" title="详细页" href="show.html">详细页</a></li>
-          <li><a data-cont="404" title="404" href="404.html">404</a></li>
+          <li><a data-cont="列表页" title="列表页" href="list.php">列表页</a></li>
+          <li><a data-cont="详细页" title="详细页" href="show.php">详细页</a></li>
+          <li><a data-cont="404" title="404" href="404.php">404</a></li>
           <li><a data-cont="MZ-NetBolg主题" title="MZ-NetBolg主题" href="http://www.muzhuangnet.com/list/mznetblog/" >MZ-NetBolg主题</a></li>
           <li><a data-cont="IT技术笔记" title="IT技术笔记" href="http://www.muzhuangnet.com/list/code/" >IT技术笔记</a></li>
           <li><a data-cont="源码分享" title="源码分享" href="http://www.muzhuangnet.com/list/share/" >源码分享</a></li>

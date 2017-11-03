@@ -52,7 +52,7 @@
     <div class="header-right">
         <?php if (isset($_SESSION['USERNAME'])) { ?>
             <a role="button" data-toggle="modal" style="text-decoration:none;">
-                欢迎你, <?php echo $_SESSION['USERNAME']; ?></a>
+                欢迎你, <?php echo '游客'; ?></a>
         <?php } ?>
         <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button"
                                                data-toggle="modal">注销</a>
@@ -88,48 +88,6 @@
             };
         </script>
 
-        <div id="my_menu" class="sdmenu">
-
-            <div>
-                <span>账薄</span>
-                <?php if ($_SESSION['PERMI_ID'] != 9) { ?>
-                    <a href="<?php
-                    if ($_SESSION['PERMI_ID'] == 4) {
-                        echo '/sales/index';
-                    } elseif ($_SESSION['PERMI_ID'] == 5) {
-                        echo '/site/index';
-                    } elseif ($_SESSION['PERMI_ID'] == 6) {
-                        echo '/agent/index';
-                    } elseif ($_SESSION['PERMI_ID'] == 7) {
-                        echo '/google/index';
-                    } elseif ($_SESSION['PERMI_ID'] == 8) {
-                        echo '/data/index';
-                    } else {
-                        echo '/sales/index';
-                    }
-                    ?>">收入部分</a>
-                <?php } ?>
-                <?php if ($_SESSION['PERMI_ID'] < 4 || $_SESSION['PERMI_ID'] == 9) { ?>
-                    <a href="/cost/index">成本部分</a>
-                <?php } ?>
-            </div>
-            <?php if ($_SESSION['PERMI_ID'] == 1 || $_SESSION['PERMI_ID'] == 3) { ?>
-                <div>
-                    <span>用户管理</span>
-                    <?php if ($_SESSION['PERMI_ID'] == 1) { ?>
-                        <a href="/admin/index">权限管理</a>
-                    <?php } ?>
-                    <a href="/user/index">客户管理</a>
-                </div>
-            <?php } ?>
-            <?php if ($_SESSION['PERMI_ID'] == 1) { ?>
-                <div>
-                    <span>日志管理</span>
-                    <a href="/log/index">日志</a>
-                </div>
-            <?php } ?>
-
-        </div>
     </div>
     <div class="Switch"></div>
     <script type="text/javascript">
