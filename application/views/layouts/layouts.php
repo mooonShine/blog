@@ -80,5 +80,17 @@
     <?php echo $_content_; ?>
 </div>
 <!-- 底部 -->
+<<<<<<< HEAD
+=======
+<script>
+    !function () {
+        laydate.skin('molv');
+        laydate({elem: '#Calendar'});
+        laydate.skin('molv');
+        laydate({elem: '#Calendar2'});
+    }();
+</script>
+<script type="text/javascript" src="/js/data.js"></script>
+>>>>>>> parent of 04c7014... 123
 </body>
 </html>
