@@ -10,7 +10,7 @@
 
 <!-- Header -->
 <header id="header">
-	<a href="index.html" class="logo"><strong>ChinaZ</strong></a>
+	<a href="index.php" class="logo"><strong>ChinaZ</strong></a>
 	<nav>
 		<a href="#menu">Menu</a>
 	</nav>
@@ -19,9 +19,9 @@
 <!-- Nav -->
 <nav id="menu">
 	<ul class="links">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="generic.html">Generic</a></li>
-		<li><a href="elements.html">Elements</a></li>
+		<li><a href="index.php">Home</a></li>
+		<li><a href="generic.php">Generic</a></li>
+		<li><a href="elements.php">Elements</a></li>
 	</ul>
 </nav>
 
@@ -44,12 +44,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Ipsum lorem sed magna</a></h2>
+				<h2><a href="generic.php">Ipsum lorem sed magna</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
@@ -67,12 +67,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Donec ex risus mollis</a></h2>
+				<h2><a href="generic.php">Donec ex risus mollis</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
@@ -90,12 +90,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Sed tempus interdum</a></h2>
+				<h2><a href="generic.php">Sed tempus interdum</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
@@ -113,12 +113,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Adipiscing sed urna</a></h2>
+				<h2><a href="generic.php">Adipiscing sed urna</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
@@ -136,12 +136,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Interdum et rutrum</a></h2>
+				<h2><a href="generic.php">Interdum et rutrum</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
@@ -159,12 +159,12 @@
 	<div class="content">
 		<div class="inner">
 			<header>
-				<h2><a href="generic.html">Magna porta aliquam</a></h2>
+				<h2><a href="generic.php">Magna porta aliquam</a></h2>
 				<p class="info">3 days ago by <a href="#">Jane Doe</a></p>
 			</header>
 			<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
 			<ul class="actions">
-				<li><a href="generic.html" class="button alt">Read More</a></li>
+				<li><a href="generic.php" class="button alt">Read More</a></li>
 			</ul>
 		</div>
 		<div class="postnav">
