@@ -10,14 +10,14 @@
 	<title>Justice - Free Bootstrap Themes</title>
   
 	<!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
 	
 	<!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 	
 	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 	
 	<!-- Custom Fonts -->
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
