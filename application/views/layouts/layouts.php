@@ -54,8 +54,7 @@
             <a role="button" data-toggle="modal" style="text-decoration:none;">
                 欢迎你, <?php echo '游客'; ?></a>
         <?php } ?>
-        <i class="icon-off icon-white"></i> <a id="modal-973558" href="#modal-container-973558" role="button"
-                                               data-toggle="modal">注销</a>
+        <i class="icon-off icon-white"></i>
         <div id="modal-container-973558" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true" style="width:300px; margin-left:-150px; top:30%">
             <div class="modal-header">
