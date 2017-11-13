@@ -11,7 +11,7 @@
     <div class="left">
     </div>
     <div class="Switch"></div>
-    <?php echo $_content_; ?>
+<!--    --><?php //echo $_content_; ?>
 </div>
 <!-- 底部 -->
 </body>

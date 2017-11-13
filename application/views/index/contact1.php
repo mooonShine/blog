@@ -69,23 +69,23 @@ if(isset($_POST['submitcontact']))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">JUSTICE</a>
+                <a class="navbar-brand page-scroll" href="index.php">JUSTICE</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                    <li>
-                        <a class="page-scroll" href="index.html">Home</a>
+                        <a class="page-scroll" href="index.php">Home</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="archive.html">Blog</a>
+                        <a class="page-scroll" href="archive.php">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="single.html">About</a>
+                        <a class="page-scroll" href="single.php">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.html">Contact</a>
+                        <a class="page-scroll" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -107,7 +107,7 @@ if(isset($_POST['submitcontact']))
 	<header class="container">
 		<div class="site-branding">
 			<h1 class="site-title">
-				<a href="index.html">
+				<a href="index.php">
 					<span>Justice</span>
 				</a>
 			</h1>
@@ -150,7 +150,7 @@ if(isset($_POST['submitcontact']))
 									<!--Warning-->
 									<center><?php echo $text;?></center>
 									<!---->
-									<form name="form1" method="post" action="contact.php">
+									<form name="form1" method="post" action="contact1.php">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">
