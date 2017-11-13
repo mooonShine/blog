@@ -372,7 +372,8 @@
 	<!-- Plugin JavaScript -->
 <!--	<script src="js/jquery.easing.min.js"></script>-->
     <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
-	<script src="js/classie.js"></script>
+<!--	<script src="js/classie.js"></script>-->
+    <script src="https://cdn.bootcss.com/classie/1.0.1/classie.js"></script>
 	<script src="js/cbpAnimatedHeader.js"></script>
 	
 </body>
