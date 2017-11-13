@@ -367,8 +367,8 @@
 <!--	<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
     <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<!-- Custom Theme JavaScript -->
-	<script src="js/agency.js"></script>
-
+<!--	<script src="js/agency.js"></script>-->
+    <script src="https://cdn.bootcss.com/startbootstrap-agency/3.3.7/js/agency.js"></script>
 	<!-- Plugin JavaScript -->
 <!--	<script src="js/jquery.easing.min.js"></script>-->
     <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
