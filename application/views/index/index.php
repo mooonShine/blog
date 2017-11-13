@@ -10,7 +10,8 @@
 	<title>Justice - Free Bootstrap Themes</title>
   
 	<!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
+<!--    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
@@ -363,8 +364,8 @@
 	<!-- jQuery -->
 <!--	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>-->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<!--    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>-->
+<!--	<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    <script src="https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<!-- Custom Theme JavaScript -->
 	<script src="js/agency.js"></script>
 
