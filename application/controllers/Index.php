@@ -8,7 +8,7 @@
  */
 class Controller_Index extends Base
 {
-//    protected $layout = 'layouts';
+    protected $layout = 'layouts';
     /**
      * @Author: zhanghuang@pv25.com
      *   添加初始化
