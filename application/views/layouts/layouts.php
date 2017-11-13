@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="/css/bootstrap.css"/>
     <link rel="stylesheet" href="/css/css.css"/>
     <script type="text/javascript" src="/js/jquery1.9.0.min.js"></script>
-    <script type="text/javascript" src="/js/uploadify/jquery.uploadify.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/sdmenu.js"></script>
     <script type="text/javascript" src="/js/laydate/laydate.js"></script>
     <script type="text/javascript" src="/js/layer/layer.js"></script>
-    <link rel="stylesheet" type="text/css" href="/js/uploadify/uploadify.css">
 </head>
 <style>
     .pagination {
