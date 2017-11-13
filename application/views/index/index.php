@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 					<li>
-                        <a class="page-scroll" href="index.php">Home</a>
+                        <a class="page-scroll" href="index/index.php">Home</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="archive.php">Blog</a>
+                        <a class="page-scroll" href="index/archive.php">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="single.php">About</a>
+                        <a class="page-scroll" href="index/single.php">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.php">Contact</a>
+                        <a class="page-scroll" href="index/contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
