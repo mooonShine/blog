@@ -78,36 +78,9 @@
 <!-- 顶部 -->
 <div id="middle">
     <div class="left">
-
-        <script type="text/javascript">
-            var myMenu;
-            window.onload = function () {
-                myMenu = new SDMenu("my_menu");
-                myMenu.init();
-            };
-        </script>
-
     </div>
     <div class="Switch"></div>
-    <script type="text/javascript">
-        $(document).ready(function (e) {
-            $(".Switch").click(function () {
-                $(".left").toggle();
-
-            });
-        });
-    </script>
     <?php echo $_content_; ?>
 </div>
-<!-- 底部 -->
-<!--<script>-->
-<!--    !function () {-->
-<!--        laydate.skin('molv');-->
-<!--        laydate({elem: '#Calendar'});-->
-<!--        laydate.skin('molv');-->
-<!--        laydate({elem: '#Calendar2'});-->
-<!--    }();-->
-<!--</script>-->
-<!--<script type="text/javascript" src="/js/data.js"></script>-->
 </body>
 </html>
