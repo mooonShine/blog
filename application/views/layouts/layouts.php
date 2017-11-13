@@ -100,14 +100,14 @@
     <?php echo $_content_; ?>
 </div>
 <!-- 底部 -->
-<script>
-    !function () {
-        laydate.skin('molv');
-        laydate({elem: '#Calendar'});
-        laydate.skin('molv');
-        laydate({elem: '#Calendar2'});
-    }();
-</script>
-<script type="text/javascript" src="/js/data.js"></script>
+<!--<script>-->
+<!--    !function () {-->
+<!--        laydate.skin('molv');-->
+<!--        laydate({elem: '#Calendar'});-->
+<!--        laydate.skin('molv');-->
+<!--        laydate({elem: '#Calendar2'});-->
+<!--    }();-->
+<!--</script>-->
+<!--<script type="text/javascript" src="/js/data.js"></script>-->
 </body>
 </html>
