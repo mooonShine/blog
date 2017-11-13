@@ -22,4 +22,16 @@ class Controller_Index extends Base
     {
         $this->display('index/index');
     }
+    public function singleAction()
+    {
+        $this->display('index/single');
+    }
+    public function archiveAction()
+    {
+        $this->display('index/archive');
+    }
+    public function contactAction()
+    {
+        $this->display('index/contact');
+    }
 }
