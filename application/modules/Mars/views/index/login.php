@@ -1,88 +1,43 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="/admin/lib/html5.js"></script>
-    <script type="text/javascript" src="/admin/lib/respond.min.js"></script>
-    <script type="text/javascript" src="/admin/lib/PIE_IE678.js"></script>
-    <![endif]-->
-    <link href="/admin/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css"/>
-    <link href="/admin/static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css"/>
-    <link href="/admin/static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="/admin/lib/Hui-iconfont/1.0.7/iconfont.css" rel="stylesheet" type="text/css"/>
-    <!--[if IE 6]>
-    <script type="text/javascript" src="http:///lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
-    <script>DD_belatedPNG.fix('*');</script>
-    <![endif]-->
-    <title>后台登录 - 房产云</title>
-</head>
-<body>
-<input type="hidden" id="TenantId" name="TenantId" value=""/>
-<div class="header">
-    <span style="font-size: 35px;color: white;padding-left: 20px;display: inline-block;">房产热力图后台管理系统</span>
-</div>
-<div class="loginWraper">
-    <div id="loginform" class="loginBox">
-        <form class="form form-horizontal">
-            <div class="row cl">
-                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
-                <div class="formControls col-xs-8">
-                    <input id="username" name="" type="text" placeholder="账户" class="input-text size-L">
-                </div>
-            </div>
-            <div class="row cl">
-                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
-                <div class="formControls col-xs-8">
-                    <input id="password" name="" type="password" placeholder="密码" class="input-text size-L">
-                </div>
-            </div>
-            <div class="row cl">
-                <div class="formControls col-xs-8 col-xs-offset-3">
-                    <input class="input-text size-L" type="text" id="code" placeholder="验证码：" style="width:150px;">
-                    <img src="/member/code" width="100" height="40" id="pcode"> <a id="kanbuq"
-                                                                                     href="javascript:reload();">看不清，换一张</a>
-                </div>
-            </div>
-            <div class="row cl">
-                <div class="formControls col-xs-8 col-xs-offset-3">
-                    <label for="online">
-                        <input type="checkbox" name="online" id="online" value="1">
-                        使我保持登录状态</label>
-                </div>
-            </div>
-            <div class="row cl">
-                <div class="formControls col-xs-8 col-xs-offset-3">
-                    <input name="" id="subBtn" type="button" class="btn btn-success radius size-L"
-                           value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
-                    <input name="" type="reset" class="btn btn-default radius size-L"
-                           value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="footer">Copyright 浙江启冠网络股份有限公司</div>
-<script type="text/javascript" src="/admin/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="/admin/static/h-ui/js/H-ui.js"></script>
+<meta charset="utf-8"/>
+<title>后台登录</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="/admin/css/style.css" tppabs="/css/style.css" />
+<style>
+body{height:100%;background:#16a085;overflow:hidden;}
+canvas{z-index:-1;position:absolute;}
+</style>
+<script src="/admin/js/jquery.js"></script>
+<!--<script src="/js/verificationNumbers.js" tppabs="/js/verificationNumbers.js"></script>-->
+<script src="/admin/js/Particleground.js" tppabs="/admin/js/Particleground.js"></script>
 <script type="text/javascript" src="/admin/lib/layer/3.0/layer.js"></script>
 <script>
-    if (top.location.href != location.href) {
+if (top.location.href != location.href) {
         top.location.href = location.href;
     }
-    function reload() {
-        $('#pcode').attr("src", "/member/code?" + (new Date()));
+$(document).ready(function() {
+  //粒子背景特效
+  $('body').particleground({
+    dotColor: '#5cbdaa',
+    lineColor: '#5cbdaa'
+  });
+  //验证码
+ // createCode();
+  //测试提交，对接程序删除即可
+  $(".submit_btn").click(function(){
+	  location.href="javascrpt:;"/*tpa=http://***index.html*/;
+	  });
+});
+function reload() {
+        $('#pcode').attr("src", "/Mars/member/code?" + (new Date()));
     }
     $(function () {
         function login() {
             var uname = $("#username").val();
             var pwd = $("#password").val();
-            var code = $("#code").val();
+            var code = $("input[name='code']").val();
             var isc = $("#online").is(':checked') ? 1 : 0;
 
 
@@ -100,7 +55,7 @@
             }
 
             $.ajax({
-                'url': "/member/login",
+                'url': "/Mars/member/login",
                 "type": "post",
                 "data": {
                     'username': uname, 'pwd': pwd, "code": code, 'isc': isc,
@@ -128,10 +83,37 @@
             //点击登陆
             login();
         })
-    })
-    ;
-
-
+    });
 </script>
+</head>
+<body>
+<dl class="admin_login">
+ <dt>
+  <strong>站点后台管理系统</strong>
+  <em>Management System</em>
+ </dt>
+ <dd class="user_icon">
+  <input type="text" id="username"  placeholder="账号" class="login_txtbx"/>
+ </dd>
+ <dd class="pwd_icon">
+  <input type="password" id="password" placeholder="密码" class="login_txtbx"/>
+ </dd>
+ <dd class="val_icon">
+  <div class="checkcode">
+    <input type="text" id="J_codetext" name="code" placeholder="验证码" maxlength="4" class="login_txtbx">
+   <a id="kanbuq" href="javascript:reload();">
+    <img src="/Mars/member/code" style="width:56px;height:42px;float:right"  class="J_codeimg">
+   </a>
+  </div>
+  <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+ </dd>
+ <dd>
+  <input type="button" value="立即登陆" id="subBtn" class="submit_btn"/>
+ </dd>
+ <dd>
+  <p>© 2017  清风自来</p>
+  <p>一个无聊的人</p>
+ </dd>
+</dl>
 </body>
 </html>
