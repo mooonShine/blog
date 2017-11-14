@@ -5,7 +5,7 @@
  * Date:  2016/12/6
  * Time:  11:43
  */
-class Controller_User extends Base{
+class Controller_User extends Front{
 
     protected $layout = 'layouts';
     protected $pay_url = 'http://login.juhuisuan.com/interface/';

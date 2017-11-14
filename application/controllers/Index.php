@@ -6,7 +6,7 @@
  * Date: 16-12-5
  * Time: 下午1:39
  */
-class Controller_Index extends Base
+class Controller_Index extends Front
 {
     protected $layout = 'layouts';
     /**

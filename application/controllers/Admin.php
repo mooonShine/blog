@@ -6,7 +6,7 @@
  * Date:  2016/12/6
  * Time:  11:09
  */
-class Controller_Admin extends Base
+class Controller_Admin extends Front
 {
 
     protected $layout = 'layouts';

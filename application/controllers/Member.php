@@ -5,7 +5,7 @@
  * Date:  2016/12/6
  * Time:  10:13
  */
-class Controller_Member extends Web
+class Controller_Member extends Front
 {
     protected $log='';
     public function init()

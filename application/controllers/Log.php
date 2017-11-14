@@ -3,7 +3,7 @@
  * User: lidc
  * Date: 16-12-6
  */
-class controller_Log extends Base{
+class controller_Log extends Front{
 
     protected $layout = 'layouts';
     protected $log='';
