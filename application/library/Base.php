@@ -13,7 +13,7 @@ class Base extends Web
     private function checkLogin()
     {
         if (!$this->_session->get('userinfo')) {
-            $this->redirect("/member/login");
+            $this->redirect("/Mars/member/login");
             exit;
         }
     }
