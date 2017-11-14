@@ -60,7 +60,7 @@ function reload() {
                 "dataType": "json",
                 "success": function (res) {
                     if (res.ret == 0) {
-                        window.location.href = "/mars/index/main";
+                        window.location.href = "/mars/index/index";
                     } else {
                         layer.msg(res.msg);
                     }
