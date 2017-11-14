@@ -52,8 +52,13 @@ class Bootstrap extends Yaf_Bootstrap_Abstract
     //初始化视图模板
     public function _initLayout( Yaf_Dispatcher $dispatcher )
     {
-        $layout = new Layout( $this->_config->application->layout->directory );
-        $dispatcher->setView( $layout );
+        if(strpos(strtolower($_SERVER['REQUEST_URI']),"mars/")){
+            $layout = new Layout( $this->_config->application->layout_mars->directory );
+            $dispatcher->setView( $layout );
+        }else{
+            $layout = new Layout( $this->_config->application->layout->directory );
+            $dispatcher->setView( $layout );
+        }
     }
 
     //初始化错误处理

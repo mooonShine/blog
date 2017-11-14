@@ -14,7 +14,7 @@ application.url.ext = html
 application.dispatcher.defaultModuel=Index
 application.dispatcher.defaultController=Index
 application.dispatcher.defaultAction=index
-application.modules=Index
+application.modules=Index,Mars
 
 ;开启错误报告
 application.showErrors = 1
@@ -22,6 +22,7 @@ application.showErrors = 1
 ;yaf.name_separator= _
 
 application.layout.directory=APP_PATH "/views" "/layouts"
+application.layout_mars.directory=APP_PATH "/modules/Mars/views" "/layouts"
 
 ;是否是测试
 application.debug = 1
@@ -30,7 +31,7 @@ application.debug = 1
 application.show = 1
 
 ;数据库
-database.params.master.server     = 192.168.1.199
+database.params.master.server     = 127.0.0.1
 database.params.master.username = root
 database.params.master.password = 123456
 database.params.master.database_type = mysql
@@ -42,5 +43,5 @@ database.params.master.master=1
 
 
 [product:ap]
-webroot=http://finance.9xu.com
+webroot=http://www.blog.com
 
