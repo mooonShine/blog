@@ -33,7 +33,7 @@
         <span style="text-align: center">
             当前条件下,总展现量:<button class="btn btn-secondary radius"><?php echo isset($total_pv)?$total_pv:0;?></button>,
             总点击量:<button class="btn btn-secondary radius"><?php echo isset($total_click)?$total_click:0;?></button>,
-            点击率:<button class="btn btn-secondary radius"><?php echo isset($total_click) ? sprintf("%0.2f", ($total_click / ($total_pv)) * 100) . '%' : '0.00%'; ?></button>
+            点击率:<button class="btn btn-secondary radius"><?php echo isset($total_click)&&$total_click > 0 ? sprintf("%0.2f", ($total_click / ($total_pv)) * 100) . '%' : '0.00%'; ?></button>
         </span>
     </div>
     <div class="mt-5">

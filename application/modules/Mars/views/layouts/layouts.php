@@ -23,7 +23,7 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <title></title>
-    <?php include_once APP_PATH."/views/layouts/index_footer.php";?>
+    <?php include_once APP_PATH."/modules/Mars/views/layouts/index_footer.php";?>
 </head>
 <body>
 <?php echo $_content_; ?>
