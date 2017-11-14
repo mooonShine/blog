@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
 	
 	<!-- Owl Carousel Assets -->
-    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/owl-carousel/owl.carousel.css" rel="stylesheet">
     <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 	
 	<!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
 	
 	<!-- Custom Fonts -->
-    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
+    <link rel="stylesheet" href="/font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
 	
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
