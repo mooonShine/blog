@@ -78,8 +78,8 @@
             <dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/system/add" data-title="新建系统账号" href="javascript:;">新建系统账号</a></li>
-                    <li><a data-href="/system/list" data-title="系统账号列表" href="javascript:;">系统账号列表</a></li>
+                    <li><a data-href="/Mars/system/add" data-title="新建系统账号" href="javascript:;">新建系统账号</a></li>
+                    <li><a data-href="/Mars/system/list" data-title="系统账号列表" href="javascript:;">系统账号列表</a></li>
                 </ul>
             </dd>
         </dl>
