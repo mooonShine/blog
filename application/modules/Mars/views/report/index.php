@@ -10,7 +10,7 @@
 
 <div class="page-container">
     <div class="text-c">
-        <form action="/report/index" method="get">
+        <form action="/Mars/report/index" method="get">
             开始日：<input type="text" name="start_date" class="laydate-icon" id="start" value="<?php if(fn_get_val('start_date')){ echo fn_get_val('start_date');}else{ echo date('Y-m-01', strtotime(date("Y-m-d")));} ?>" />
             结束日：<input type="text" name="end_date" class="laydate-icon" id="end" value="<?php if(fn_get_val('end_date')){ echo fn_get_val('end_date');}else{ echo date('Y-m-d',time()-86400);} ?>" />
             <select name="status" id="status" class="select" style="width: 100px">
@@ -117,7 +117,7 @@
         }, function (index, layero) {
             layer.close(index);
         }, function () {
-            window.location.href = "/admin/user/del/id/" + ids.join(",");
+            window.location.href = "//Mars/user/del/id/" + ids.join(",");
         });
     }
 </script>
@@ -130,7 +130,7 @@
             }, function (index, layero) {
                 layer.close(index);
             }, function () {
-                window.location.href = "/customer/reset/id/" + oid;
+                window.location.href = "/Mars/customer/reset/id/" + oid;
             });
         })
 

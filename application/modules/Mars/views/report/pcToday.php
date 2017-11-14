@@ -10,7 +10,7 @@
 
 <div class="page-container">
     <div class="text-c">
-        <form action="/report/pcToday" method="get">
+        <form action="/Mars/report/pcToday" method="get">
             <select name="status_type" id="status_type" class="select" style="width: 100px">
                 <option value="">请选择</option>
                 <option value="1" <?php if(fn_get_val("status_type")==1){ echo 'selected';}?>>广告名称</option>

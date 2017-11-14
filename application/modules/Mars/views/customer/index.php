@@ -126,7 +126,7 @@
         }, function (index, layero) {
             layer.close(index);
         }, function () {
-            window.location.href = "/admin/user/del/id/" + ids.join(",");
+            window.location.href = "/Mars/user/del/id/" + ids.join(",");
         });
     }
 </script>
@@ -138,14 +138,14 @@
     }
     $(function () {
         $('.delBtn').click(function () {
-            var succ_url='/customer/index';
+            var succ_url='/Mars/customer/index';
             var oid = $(this).attr('oid');
             layer.msg('是否确定重置密码？', {
                 time: 0 //不自动关闭
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
                     $.ajax({
-                        url: '/customer/reset',
+                        url: '/Mars/customer/reset',
                         type: 'POST',
                         dataType: 'json',
                         data: {'id':oid},
@@ -173,7 +173,7 @@
         })
         //冻结和解冻
         $('.statusBtn').click(function () {
-            var succ_url='/customer/index';
+            var succ_url='/Mars/customer/index';
             var oid = $(this).attr('oid');
             var status = $(this).attr('status');
             var info=status==1?'冻结':'解冻';
@@ -182,7 +182,7 @@
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
                     $.ajax({
-                        url: '/customer/status',
+                        url: '/Mars/customer/status',
                         type: 'POST',
                         dataType: 'json',
                         data: {'id':oid,'status':status},
@@ -267,7 +267,7 @@
         $(".frate").dblclick(function(){
             var uid=$(this).attr('uid');
             var frate=$(this).text();
-            var succ_url='/customer/index';
+            var succ_url='/Mars/customer/index';
             //frate必须为大于0的数字
             var inpu="<input type='text' class='input-text radius' onkeydown='onlyNum()' value="+frate+">";
             $(this).html(inpu);
@@ -278,7 +278,7 @@
                     $(that).html(frate);
                 }else{
                     $.ajax({
-                        url: '/customer/editFrate',
+                        url: '/Mars/customer/editFrate',
                         type: 'POST',
                         dataType: 'json',
                         data: {uid: uid, frate: $(this).val()},

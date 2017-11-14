@@ -13,7 +13,7 @@ $roles = isset($roles) ? $roles : [];
 
 <div class="page-container">
     <div class="text-c">
-        <form action="/advert/check" method="get">
+        <form action="/Mars/advert/check" method="get">
             开始日：<input type="text" name="start_date" class="laydate-icon" id="start" value="<?php if(fn_get_val('start_date')){ echo fn_get_val('start_date');}else{ echo date('Y-m-01', strtotime(date("Y-m-d")));} ?>" />
             结束日：<input type="text" name="end_date" class="laydate-icon" id="end" value="<?php if(fn_get_val('end_date')){ echo fn_get_val('end_date');}else{ echo date('Y-m-d',time());} ?>" />
             <select name="status_type"  class="select" style="width: 100px">
@@ -276,7 +276,7 @@ $roles = isset($roles) ? $roles : [];
 
 <div id="box" style="display: none;">
     <div class="form_check">
-        <form action="/advert/edit" method="post" id="form1">
+        <form action="/Mars/advert/edit" method="post" id="form1">
             <input type="hidden" name="id" id="id" value=""/>
             <div class="form_div_check">
                 <label class="form-label form_title ">楼盘特色：<span id="conditi"></span><em></em></label>
@@ -375,7 +375,7 @@ $roles = isset($roles) ? $roles : [];
 
 <div id="checkAdvert" style="display: none;">
     <div class="form_check ">
-        <form action="/advert/edit" method="post" id="form2">
+        <form action="/Mars/advert/edit" method="post" id="form2">
             <div class="form_div_check">
                 <label class="form-label form_title ">审核不通过<span></span></label>
             </div>
@@ -481,7 +481,7 @@ $roles = isset($roles) ? $roles : [];
     $(".check").on("click", function() {
         var id = $(this).attr('re');
         $.ajax({
-            url: '/advert/getInfo',
+            url: '/Mars/advert/getInfo',
             type: 'get',
             dataType: 'json',
             data: {id:id},
@@ -634,7 +634,7 @@ $roles = isset($roles) ? $roles : [];
     function  checkAdvert(data)
     {
         $.ajax({
-            url: '/advert/checkAdvert',
+            url: '/Mars/advert/checkAdvert',
             type: 'get',
             dataType: 'json',
             data: data,
@@ -660,7 +660,7 @@ $roles = isset($roles) ? $roles : [];
     function  bmitInfo(data)
     {
         $.ajax({
-            url: '/advert/edit',
+            url: '/Mars/advert/edit',
             type: 'get',
             dataType: 'json',
             data: data,
@@ -753,7 +753,7 @@ $roles = isset($roles) ? $roles : [];
                 var formData = new FormData($("#formF")[0]);
                 $("#imgPic").val($("#btnUpload").val());
                 $.ajax({
-                    url: "/member/upload",
+                    url: "/Mars/member/upload",
                     type: "POST",
                     data: formData,
                     cache: false,

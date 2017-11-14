@@ -40,7 +40,7 @@
                         </a>
                         <?php } ?>
                         <a style="text-decoration:none" class="ml-5 addAccount" oid="<?php echo $value['id']; ?>"
-                           href="/customer/add?applyId=<?php echo $value['id']; ?>&phone=<?php echo $value['phone']; ?>" title="开通账号">开通账号
+                           href="/Mars/customer/add?applyId=<?php echo $value['id']; ?>&phone=<?php echo $value['phone']; ?>" title="开通账号">开通账号
                         </a>
                     </td>
                 </tr>
@@ -60,7 +60,7 @@
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
                     $.ajax({
-                        url: '/customer/applyCheck',
+                        url: '/Mars/customer/applyCheck',
                         type: 'POST',
                         dataType: 'json',
                         data: {'id':oid},
@@ -91,7 +91,7 @@
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
                     $.ajax({
-                        url: '/customer/applyConfirm',
+                        url: '/Mars/customer/applyConfirm',
                         type: 'POST',
                         dataType: 'json',
                         data: {'id':oid},
@@ -122,7 +122,7 @@
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
                     $.ajax({
-                        url: '/customer/addAccount',
+                        url: '/Mars/customer/addAccount',
                         type: 'POST',
                         dataType: 'json',
                         data: {'id':oid},

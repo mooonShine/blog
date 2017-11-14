@@ -119,7 +119,7 @@
         var returnVal;
 
         $.ajax({
-            url: '/Customer/verification',
+            url: '/Mars/Customer/verification',
             type: 'POST',
             dataType: 'json',
             async: false,
@@ -140,7 +140,7 @@
         var returnVal;
 
         $.ajax({
-            url: '/Customer/verification',
+            url: '/Mars/Customer/verification',
             type: 'POST',
             dataType: 'json',
             async: false,
@@ -160,7 +160,7 @@
         var returnVal;
 
         $.ajax({
-            url: '/Customer/verification',
+            url: '/Mars/Customer/verification',
             type: 'POST',
             dataType: 'json',
             async: false,
@@ -236,7 +236,7 @@
             applyId: $("#applyId").val().trim(),
             pid: $("#pid").val().trim()
         }
-        var succ_url='/customer/index';
+        var succ_url='/Mars/customer/index';
         if(data.user_name == ""||data.user_name ==null||data.user_name ==undefined) {
             $("#user_name").addClass('error');
             return false
@@ -269,7 +269,7 @@
             return false
         }
         $.ajax({
-            url: '/customer/add',
+            url: '/Mars/customer/add',
             type: 'POST',
             dataType: 'json',
             data: data,

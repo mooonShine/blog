@@ -8,7 +8,7 @@
     </a>
 </nav>
 <div class="page-container">
-    <form action="/finance/addRecharge" method="post" class="form form-horizontal" id="demoform-1">
+    <form action="/Mars/finance/addRecharge" method="post" class="form form-horizontal" id="demoform-1">
         <legend>添加充值</legend>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3">用户名：</label>
@@ -97,7 +97,7 @@
         }
 
         $.ajax({
-            url: '/finance/addRecharge',
+            url: '/Mars/finance/addRecharge',
             type: 'POST',
             dataType: 'json',
             data: data,

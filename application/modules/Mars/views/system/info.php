@@ -47,8 +47,8 @@
                     <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A"><?php echo isset($_SESSION['userinfo']['name']) ? $_SESSION['userinfo']['name'] : ''; ?><i class="Hui-iconfont">
                                 &#xe6d5;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
-                            <li><a href="/system/info" >个人信息</a></li>
-                            <li><a href="/member/logout">退出</a></li>
+                            <li><a href="/Mars/system/info" >个人信息</a></li>
+                            <li><a href="/Mars/member/logout">退出</a></li>
                         </ul>
                     </li>
 <!--                    <li id="Hui-msg"><a href="#" title="消息"><span class="badge badge-danger">1</span><i-->
@@ -87,9 +87,9 @@
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 客户中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/customer/add" data-title="客户添加" href="javascript:void(0)">客户添加</a></li>
-                    <li><a data-href="/customer/index" data-title="客户列表" href="javascript:void(0)">客户列表</a></li>
-                    <li><a data-href="/customer/apply" data-title="客户申请" href="javascript:void(0)">客户申请</a></li>
+                    <li><a data-href="/Mars/customer/add" data-title="客户添加" href="javascript:void(0)">客户添加</a></li>
+                    <li><a data-href="/Mars/customer/index" data-title="客户列表" href="javascript:void(0)">客户列表</a></li>
+                    <li><a data-href="/Mars/customer/apply" data-title="客户申请" href="javascript:void(0)">客户申请</a></li>
                 </ul>
             </dd>
         </dl>
@@ -97,8 +97,8 @@
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/advert/check" data-title="广告审核" href="javascript:void(0)">广告审核</a></li>
-                    <li><a data-href="/advert/list" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
+                    <li><a data-href="/Mars/advert/check" data-title="广告审核" href="javascript:void(0)">广告审核</a></li>
+                    <li><a data-href="/Mars/advert/list" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -106,9 +106,9 @@
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 财务中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/finance/addRecharge" data-title="添加充值" href="javascript:void(0)">添加充值</a></li>
-                    <li><a data-href="/finance/rechargeRecord" data-title="充值记录" href="javascript:void(0)">充值记录</a></li>
-                    <li><a data-href="/finance/costRecord" data-title="消费记录" href="javascript:void(0)">消费记录</a></li>
+                    <li><a data-href="/Mars/finance/addRecharge" data-title="添加充值" href="javascript:void(0)">添加充值</a></li>
+                    <li><a data-href="/Mars/finance/rechargeRecord" data-title="充值记录" href="javascript:void(0)">充值记录</a></li>
+                    <li><a data-href="/Mars/finance/costRecord" data-title="消费记录" href="javascript:void(0)">消费记录</a></li>
                 </ul>
             </dd>
         </dl>
@@ -116,7 +116,7 @@
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 数据中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/report/index" data-title="pc广告" href="javascript:void(0)">pc广告</a></li>
+                    <li><a data-href="/Mars/report/index" data-title="pc广告" href="javascript:void(0)">pc广告</a></li>
                 </ul>
             </dd>
         </dl>
@@ -129,7 +129,7 @@
     <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
         <div class="Hui-tabNav-wp">
             <ul id="min_title_list" class="acrossTab cl">
-                <li class="active"><span title="我的桌面" data-href="/index/main">我的桌面</span><em></em></li>
+                <li class="active"><span title="我的桌面" data-href="/Mars/index/main">我的桌面</span><em></em></li>
             </ul>
         </div>
         <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S"
@@ -164,7 +164,7 @@
                     ?>
                 </p>
                 <!-- 错误提示:end -->
-                <form action="/system/resetPwd" method="post" class="form form-horizontal" id="form-article-add">
+                <form action="/Mars/system/resetPwd" method="post" class="form form-horizontal" id="form-article-add">
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2"><span class="c-red"></span>用户名称：</label>
                         <div class="formControls col-xs-8 col-sm-9">

@@ -26,9 +26,6 @@ $(document).ready(function() {
   //验证码
  // createCode();
   //测试提交，对接程序删除即可
-  $(".submit_btn").click(function(){
-	  location.href="javascrpt:;"/*tpa=http://***index.html*/;
-	  });
 });
 function reload() {
         $('#pcode').attr("src", "/Mars/member/code?" + (new Date()));
@@ -63,7 +60,7 @@ function reload() {
                 "dataType": "json",
                 "success": function (res) {
                     if (res.ret == 0) {
-                        window.location.href = "/";
+                        window.location.href = "/mars/index/main";
                     } else {
                         layer.msg(res.msg);
                     }

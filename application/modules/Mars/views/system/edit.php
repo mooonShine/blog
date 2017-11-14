@@ -23,7 +23,7 @@
         ?>
     </p>
     <!-- 错误提示:end -->
-    <form action="/system/edit" method="post" class="form form-horizontal" id="form-article-add">
+    <form action="/Mars/system/edit" method="post" class="form form-horizontal" id="form-article-add">
         <input type="hidden" id="id" name="id" value="<?php echo isset($info['id'])?$info['id']:-1; ?>"/>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名称：</label>

@@ -13,7 +13,7 @@ $roles = isset($roles) ? $roles : [];
 
 <div class="page-container">
     <div class="text-c">
-        <form action="/system/list" method="get">
+        <form action="/Mars/system/list" method="get">
             开始日：<input type="text" name="start_date" class="laydate-icon" id="start" value="<?php echo fn_get_val('start_date') ?>" />
             结束日：<input type="text" name="end_date" class="laydate-icon" id="end" value="<?php echo fn_get_val('end_date') ?>" />
             <select name="status_type"  class="select" style="width: 100px">
@@ -50,7 +50,7 @@ $roles = isset($roles) ? $roles : [];
                     <td class="text-c"><?php echo $status[$value['status']]; ?></td>
                     <td class="f-14 td-manage">
                         <a style="text-decoration:none" class="ml-5"
-                           onClick="group_open('用户编辑','/system/edit/?id=<?php echo $value['id'] ?>')"
+                           onClick="group_open('用户编辑','/Mars/system/edit/?id=<?php echo $value['id'] ?>')"
                            href="javascript:;"
                            title="编辑">
                             <i class="Hui-iconfont">&#xe6df;</i></a>
@@ -121,7 +121,7 @@ $roles = isset($roles) ? $roles : [];
                 time: 0 //不自动关闭
                 ,btn: ['确定', '取消']
                 ,yes: function(index){
-                    window.location.href = "/system/del/id/" + oid;
+                    window.location.href = "/Mars/system/del/id/" + oid;
                 }
             });
         });

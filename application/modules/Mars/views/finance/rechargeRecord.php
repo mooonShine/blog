@@ -9,7 +9,7 @@
 </nav>
 <div class="page-container">
     <div class="text-c">
-        <form action="/finance/rechargeRecord" method="get">
+        <form action="/Mars/finance/rechargeRecord" method="get">
             开始日：<input type="text" name="start_date" class="laydate-icon" id="start"
                        value="<?php if(fn_get_val('start_date')){ echo fn_get_val('start_date');}else{ echo date('Y-m-01', strtotime(date("Y-m-d")));} ?>"/>
             结束日：<input type="text" name="end_date" class="laydate-icon" id="end"
