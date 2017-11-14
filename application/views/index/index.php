@@ -50,15 +50,6 @@
 			</h1>
 			<h2 class="site-description">Welcome to Us !</h2>
 		</div>
-		<div class="social-links">
-			<ul class="list-inline">
-				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				<li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-				<li><a href="#"><i class="fa fa-rss"></i></a></li>
-			</ul>
-		</div>
 	</header>
     <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
 	
