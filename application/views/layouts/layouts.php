@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Free Bootstrap Themes by HTML5XCSS3 dot com - Free Responsive Html5 Templates">
+    <meta name="description" content="程序小屋">
     <meta name="author" content="#">
 
-    <title>Justice - Free Bootstrap Themes</title>
+    <title>程序小屋</title>
 
     <!-- Bootstrap Core CSS -->
     <!--    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">-->
@@ -46,23 +46,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="index.php">JUSTICE</a>
+            <a class="navbar-brand page-scroll" href="/index/index">HOME</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="/index/index">Home</a>
+                    <a class="page-scroll" href="/index/index">主页</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/index/archive">Blog</a>
+                    <a class="page-scroll" href="/index/archive">博客</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/index/single">About</a>
+                    <a class="page-scroll" href="/index/single">关于</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/index/contact">Contact</a>
+                    <a class="page-scroll" href="/index/contact">联系</a>
                 </li>
             </ul>
         </div>
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-footer col-md-3">
-                    <h2 class="footer-title">About Us</h2>
+                    <h2 class="footer-title">关于程序小屋</h2>
                     <div class="textwidget">Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan. <br> <br>
                         Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. Pellentesque rutrum fringilla elementum. Curabitur tincidunt porta lorem vitae accumsan.</div>
                 </div>
