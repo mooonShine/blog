@@ -6,7 +6,7 @@
  * Date: 17-2-8
  * Time: 上午10:25
  */
-class Model_Users extends Smodel
+class Model_User extends Smodel
 {
     protected $table = "users";
 

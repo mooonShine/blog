@@ -32,26 +32,6 @@ class Web extends Yaf_Controller_Abstract
         $this->getView()->setLayout($this->layout);
         //防止自动渲染模板页
         Yaf_Dispatcher::getInstance()->disableView();
-        //账号定义
-        DEFINE('PERMI_ADMIN',1);//大账号
-        DEFINE('PERMI_FINANCIAL_LOOK',2);//财务(看)
-        DEFINE('PERMI_FINANCIAL',3);//财务
-        DEFINE('PERMI_SALES',4);//销售
-        DEFINE('PERMI_SITE',5);//站内
-        DEFINE('PERMI_AGENT',6);//代理
-        DEFINE('PERMI_GOOGLE',7);//谷歌
-        DEFINE('PERMI_DATA',8);//数据
-        DEFINE('PERMI_COST',9);//渠道
-        //部门定义
-        DEFINE('DEPART_SALES',1);//销售部
-        DEFINE('DEPART_SITE',2);//站内
-        DEFINE('DEPART_AGENT',3);//代理
-        DEFINE('DEPART_GOOGLE',4);//谷歌
-        DEFINE('DEPART_DATA',5);//数据
-        DEFINE('DEPART_COST',6);//渠道
-        //判断子账号添加过期日期号
-        DEFINE('TIME_START_DAY',10);
-        DEFINE('TIME_END_DAY',26);
     }
 
     //渲染视图
