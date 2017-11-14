@@ -10,14 +10,14 @@
 	<title>Justice - Free Bootstrap Themes</title>
   
 	<!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
 	
 	<!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 	
 	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 	
 	<!-- Custom Fonts -->
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
@@ -26,8 +26,8 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
+        <script src="/js/html5shiv.js"></script>
+        <script src="/js/respond.min.js"></script>
     <![endif]-->
 	
 </head>
@@ -44,23 +44,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">JUSTICE</a>
+                <a class="navbar-brand page-scroll" href="/index/index">JUSTICE</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                    <li>
-                        <a class="page-scroll" href="index.php">Home</a>
+                        <a class="page-scroll" href="/index/index">Home</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="archive.php">Blog</a>
+                        <a class="page-scroll" href="/index/archive">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="single.php">About</a>
+                        <a class="page-scroll" href="/index/single">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.php">Contact</a>
+                        <a class="page-scroll" href="/index/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@
 	<header class="container">
 		<div class="site-branding">
 			<h1 class="site-title">
-				<a href="index.php">
+				<a href="/index/index">
 					<span>Justice</span>
 				</a>
 			</h1>
@@ -252,16 +252,16 @@
 	</footer>
   
 	<!-- jQuery -->
-	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	
 	<!-- Custom Theme JavaScript -->
-	<script src="js/agency.js"></script>
+	<script src="/js/agency.js"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="js/jquery.easing.min.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="/js/jquery.easing.min.js"></script>
+	<script src="/js/classie.js"></script>
+	<script src="/js/cbpAnimatedHeader.js"></script>
 	
 	<!-- Google Map -->
 	<script>

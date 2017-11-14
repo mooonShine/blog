@@ -27,8 +27,8 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
+        <script src="/js/html5shiv.js"></script>
+        <script src="/js/respond.min.js"></script>
     <![endif]-->
 	
 </head>
@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 					<li>
-                        <a class="page-scroll" href="index/index.php">Home</a>
+                        <a class="page-scroll" href="/index/index">Home</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="index/archive.php">Blog</a>
+                        <a class="page-scroll" href="/index/archive">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index/single.php">About</a>
+                        <a class="page-scroll" href="/index/single">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="index/contact.php">Contact</a>
+                        <a class="page-scroll" href="/index/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="images/banner1.jpg" alt="...">
+				<img src="/images/banner1.jpg" alt="...">
 				<!-- Static Header -->
 				<div class="container">
 				<div class="header-text hidden-xs">
@@ -91,7 +91,7 @@
 				</div>
 			</div>
 			<div class="item">
-				<img src="images/banner2.jpg" alt="...">
+				<img src="/images/banner2.jpg" alt="...">
 				<!-- Static Header -->
 				<div class="header-text hidden-xs">
 					<div class="col-md-12 text-center">
@@ -143,7 +143,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/13.jpg" class="img-responsive"/>
+							<img src="/images/13.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Pellentesque vehicula</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -153,7 +153,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/1.jpg" class="img-responsive"/>
+							<img src="/images/1.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Planning Our Honeymoon</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
@@ -163,7 +163,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/2.jpg" class="img-responsive"/>
+							<img src="/images/2.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Brainstorming Wedding Ideas</h3>
 								<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
@@ -173,7 +173,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/10.jpg" class="img-responsive"/>
+							<img src="/images/10.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -185,7 +185,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/3.jpg" class="img-responsive"/>
+							<img src="/images/3.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Donec bibendum orci</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -195,7 +195,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/4.jpg" class="img-responsive"/>
+							<img src="/images/4.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Met Dovey’s Parents in Chicago</h3>
 								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
@@ -205,7 +205,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/8.jpg" class="img-responsive"/>
+							<img src="/images/8.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -215,7 +215,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/11.jpg" class="img-responsive"/>
+							<img src="/images/11.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -227,7 +227,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/5.jpg" class="img-responsive"/>
+							<img src="/images/5.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -237,7 +237,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/12.jpg" class="img-responsive"/>
+							<img src="/images/12.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -247,7 +247,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/6.jpg" class="img-responsive"/>
+							<img src="/images/6.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>A Sweet Escape to Paris</h3>
 								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostravelit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien .</p>
@@ -257,7 +257,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/7.jpg" class="img-responsive"/>
+							<img src="/images/7.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Met Dovey’s Parents in Chicago</h3>
 								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
@@ -374,7 +374,7 @@
     <script src="https://cdn.bootcss.com/jquery-easing/1.3/jquery.easing.min.js"></script>
 <!--	<script src="js/classie.js"></script>-->
     <script src="https://cdn.bootcss.com/classie/1.0.1/classie.js"></script>
-	<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="/js/cbpAnimatedHeader.js"></script>
 	
 </body>
 </html>

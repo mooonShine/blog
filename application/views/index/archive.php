@@ -10,14 +10,14 @@
 	<title>Justice - Free Bootstrap Themes</title>
   
 	<!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css"  type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  type="text/css">
 	
 	<!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
 	
 	<!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 	
 	<!-- Custom Fonts -->
     <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css"  type="text/css">
@@ -26,8 +26,8 @@
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
+        <script src="/js/html5shiv.js"></script>
+        <script src="/js/respond.min.js"></script>
     <![endif]-->
 	
 </head>
@@ -44,23 +44,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.php">JUSTICE</a>
+                <a class="navbar-brand page-scroll" href="/index/index">JUSTICE</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="index.php">Home</a>
+                        <a class="page-scroll" href="/index/index">Home</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="archive.php">Blog</a>
+                        <a class="page-scroll" href="/index/archive">Blog</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="single.php">About</a>
+                        <a class="page-scroll" href="/index/single">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.php">Contact</a>
+                        <a class="page-scroll" href="/index/contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -83,7 +83,7 @@
 	<header class="container">
 		<div class="site-branding">
 			<h1 class="site-title">
-				<a href="index.php">
+				<a href="/index/index">
 					<span>Justice</span>
 				</a>
 			</h1>
@@ -109,7 +109,7 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/13.jpg" class="img-responsive"/>
+							<img src="/images/13.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -119,7 +119,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/1.jpg" class="img-responsive"/>
+							<img src="/images/1.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Planning Our Honeymoon</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
@@ -129,7 +129,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/2.jpg" class="img-responsive"/>
+							<img src="/images/2.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Brainstorming Wedding Ideas</h3>
 								<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
@@ -139,7 +139,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/10.jpg" class="img-responsive"/>
+							<img src="/images/10.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -151,7 +151,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/3.jpg" class="img-responsive"/>
+							<img src="/images/3.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -161,7 +161,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/4.jpg" class="img-responsive"/>
+							<img src="/images/4.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Met Dovey’s Parents in Chicago</h3>
 								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
@@ -171,7 +171,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/8.jpg" class="img-responsive"/>
+							<img src="/images/8.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -181,7 +181,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/11.jpg" class="img-responsive"/>
+							<img src="/images/11.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -193,7 +193,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="images/5.jpg" class="img-responsive"/>
+							<img src="/images/5.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Choosing The Bridesmaids and Groomsmen</h3>
 								<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi.</p>
@@ -203,7 +203,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/12.jpg" class="img-responsive"/>
+							<img src="/images/12.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>She Said Yes!</h3>
 								<p>Nunc eu velit metus. Donec in massa libero. Donec bibendum orci a lorem scelerisque luctus. Aliquam et ante quis erat semper pretium. Pellentesque vehicula.</p>
@@ -213,7 +213,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/6.jpg" class="img-responsive"/>
+							<img src="/images/6.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>A Sweet Escape to Paris</h3>
 								<p>Proin lobortis mattis odio non ornare. Sed tempor nisi eu hendrerit luctus. Class aptent taciti sociosqu ad litora torquent per conubia nostravelit id sem tincidunt convallis ac eget quam. Vestibulum posuere porttitor sapien .</p>
@@ -223,7 +223,7 @@
 							</div>
 						</div>
 						<div class="box-item">
-							<img src="images/7.jpg" class="img-responsive"/>
+							<img src="/images/7.jpg" class="img-responsive"/>
 							<div class="content">
 								<h3>Met Dovey’s Parents in Chicago</h3>
 								<p>Class aptent taciti urna bibendum id. Duis a commodo lectus. Morbi id purus nec purus feugiat vestibulum. Suspendisse sapien ante, bibendum ac quam quis, imperdiet bibendum sem. Curabitur nibh magna, tristique et convallis…</p>
@@ -329,16 +329,16 @@
 	</footer>
   
 	<!-- jQuery -->
-	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
 	
 	<!-- Custom Theme JavaScript -->
 	<script src="js/agency.js"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="js/jquery.easing.min.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/cbpAnimatedHeader.js"></script>
+	<script src="/js/jquery.easing.min.js"></script>
+	<script src="/js/classie.js"></script>
+	<script src="/js/cbpAnimatedHeader.js"></script>
 	
 </body>
 </html>
