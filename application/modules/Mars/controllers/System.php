@@ -59,7 +59,7 @@ class Controller_System extends Base
             if (is_array($result) && count($result) > 0) {
                 $this->errorMsg = $result;
             } else {
-                fn_js_redirect('修改成功！', '/system/list');
+                fn_js_redirect('修改成功！', '/Mars/system/list');
             }
         }
 
@@ -94,7 +94,7 @@ class Controller_System extends Base
         if (is_array($result)) {
             $this->errorMsg = $result;
         } else {
-            fn_js_redirect('修改成功！', '/index');
+            fn_js_redirect('修改成功！', 'info');
         }
         $info = $this->_session->get("userinfo");
         $this->assign('info',$info);
@@ -112,9 +112,9 @@ class Controller_System extends Base
         $status = $this->model->get('status',array('id'=>$id));
         if($status==2){
             $this->model->del($id);
-            fn_js_redirect('删除成功！', '/system/list');
+            fn_js_redirect('删除成功！', '/Mars/system/list');
         }else{
-            fn_js_redirect('删除失败，请先禁用账号！', '/system/list');
+            fn_js_redirect('删除失败，请先禁用账号！', '/Mars/system/list');
         }
 
     }
@@ -129,7 +129,7 @@ class Controller_System extends Base
         $data['id'] = $id;
         $data['status'] =2;
         $this->model->editInfo($data);
-        fn_js_redirect('冻结成功！', '/system/list');
+        fn_js_redirect('冻结成功！', '/Mars/system/list');
     }
 
 }
