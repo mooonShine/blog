@@ -20,18 +20,22 @@ class Controller_Index extends Base
 
     public function indexAction()
     {
+        $this->assign('data', 'index');
         $this->display('index/index');
     }
     public function singleAction()
     {
+        $this->assign('data', 'sub');
         $this->display('index/single');
     }
     public function archiveAction()
     {
+        $this->assign('data', 'sub');
         $this->display('index/archive');
     }
     public function contactAction()
     {
+        $this->assign('data', 'sub');
         $this->display('index/contact');
     }
 }
