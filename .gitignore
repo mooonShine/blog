@@ -1,1 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
+application/conf/config.ini
+public/uploads
+public/index.php
+.idea
