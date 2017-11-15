@@ -103,29 +103,38 @@
                 <div class="col-footer col-md-3">
                     <h2 class="footer-title">Tags</h2>
                     <div class="footer-tags">
-                        <a href="#">animals</a>
-                        <a href="#">cooking</a>
-                        <a href="#">countries</a>
-                        <a href="#">city</a>
-                        <a href="#">children</a>
-                        <a href="#">home</a>
-                        <a href="#">likes</a>
-                        <a href="#">photo</a>
-                        <a href="#">link</a>
-                        <a href="#">law</a>
-                        <a href="#">shopping</a>
-                        <a href="#">skate</a>
-                        <a href="#">scholl</a>
-                        <a href="#">video</a>
-                        <a href="#">travel</a>
-                        <a href="#">images</a>
-                        <a href="#">love</a>
-                        <a href="#">lists</a>
-                        <a href="#">makeup</a>
-                        <a href="#">media</a>
-                        <a href="#">password</a>
-                        <a href="#">pagination</a>
-                        <a href="#">wildlife</a>
+                        <?php
+                        if (isset($all) && !empty($all)) {
+                            foreach ($all as  $v) {
+                                ?>
+                                <a href="/index/archive?classid=<?php echo $v['id']?>"><?php echo $v['name'];?></a>
+                                <?php
+                            }
+                        }
+                        ?>
+<!--                        <a href="#">animals</a>-->
+<!--                        <a href="#">cooking</a>-->
+<!--                        <a href="#">countries</a>-->
+<!--                        <a href="#">city</a>-->
+<!--                        <a href="#">children</a>-->
+<!--                        <a href="#">home</a>-->
+<!--                        <a href="#">likes</a>-->
+<!--                        <a href="#">photo</a>-->
+<!--                        <a href="#">link</a>-->
+<!--                        <a href="#">law</a>-->
+<!--                        <a href="#">shopping</a>-->
+<!--                        <a href="#">skate</a>-->
+<!--                        <a href="#">scholl</a>-->
+<!--                        <a href="#">video</a>-->
+<!--                        <a href="#">travel</a>-->
+<!--                        <a href="#">images</a>-->
+<!--                        <a href="#">love</a>-->
+<!--                        <a href="#">lists</a>-->
+<!--                        <a href="#">makeup</a>-->
+<!--                        <a href="#">media</a>-->
+<!--                        <a href="#">password</a>-->
+<!--                        <a href="#">pagination</a>-->
+<!--                        <a href="#">wildlife</a>-->
                     </div>
                 </div>
             </div>
