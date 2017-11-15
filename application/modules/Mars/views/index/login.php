@@ -97,12 +97,11 @@ function reload() {
  </dd>
  <dd class="val_icon">
   <div class="checkcode">
-    <input type="text" id="J_codetext" name="code" placeholder="验证码" maxlength="4" class="login_txtbx">
-   <a id="kanbuq" href="javascript:reload();">
-    <img src="/Mars/member/code" style="width:56px;height:42px;float:right"  class="J_codeimg">
-   </a>
+    <input type="text" id="J_codetext" name="code" placeholder="验证码" maxlength="4" class="login_txtbx" style="width: 100%;">
   </div>
-  <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+     <a id="kanbuq" href="javascript:reload();">
+         <img src="/Mars/member/code" style="width:56px;height:42px;float:right"  class="J_codeimg" id="pcode">
+     </a>
  </dd>
  <dd>
   <input type="button" value="立即登陆" id="subBtn" class="submit_btn"/>
