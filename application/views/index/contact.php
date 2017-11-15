@@ -43,7 +43,7 @@
 								</div>
 								<div class="col-md-8">
 									<h3>Contact Form</h3>
-									<form name="form1" method="post" action="contact1.php">
+									<form name="form1" method="post" action="/index/contact1">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">

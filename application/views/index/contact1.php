@@ -141,7 +141,7 @@ if(isset($_POST['submitcontact']))
 									<!--Warning-->
 									<center><?php echo $text;?></center>
 									<!---->
-									<form name="form1" method="post" action="contact1.php">
+									<form name="form1" method="post" action="/index/contact1">
 										<div class="row">
 											<div class="col-md-6">
 												<div class="form-group">

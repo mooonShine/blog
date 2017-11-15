@@ -113,6 +113,15 @@
             </dd>
         </dl>
         <dl id="menu-admin">
+            <dt><i class="Hui-iconfont ">&#xe62d;</i> 分类中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="/Mars/class/add" data-title="添加分类" href="javascript:void(0)">添加分类</a></li>
+                    <li><a data-href="/Mars/class/index" data-title="分类列表" href="javascript:void(0)">分类列表</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-admin">
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 数据中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
