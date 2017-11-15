@@ -7,7 +7,6 @@
         <i class="Hui-iconfont">&#xe68f;</i>
     </a>
 </nav>
-
 <div class="page-container">
     <form action="/customer/add" method="post" class="form form-horizontal" id="form-article-add">
         <div class="row cl">
@@ -69,10 +68,11 @@
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传文件：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-            <span class="btn-upload">
-                <a href="javascript:void();" onclick="upload()" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
-                <input type="file" multiple name="file_0" class="input-file" value="">
+            <div class="formControls col-xs-8 col-sm-9" >
+                <img alt="" id="imgs" class="radius" style="width: 60px;height: 60px;float: left;">
+            <span class="btn-upload" style="padding-top: 20px">
+<!--                <a href="javascript:void();" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>-->
+                <input type="file" multiple name="m_pic" class="input-file" value="" id="uploadfy">
             </span>
             </div>
         </div>
@@ -109,10 +109,10 @@
     <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
     <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/validate-methods.js"></script>
     <script type="text/javascript" src="/admin/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+    <script type="text/javascript" src="/js/uploadify/jquery.uploadify.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/uploadify/uploadify.css">
 </div>
 <script>
-
-
     jQuery.validator.addMethod("isMobile", function(value, element) {  
         var length = value.length;  
         var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;  
@@ -302,7 +302,38 @@
             }
         })
     })
-
-
+    $(function () {
+        //图片上传
+        $("#uploadfy").uploadify({
+            'swf': '/js/uploadify/uploadify.swf',//uploadify.swf 文件的路径（绝对路径、相对路径都可以）
+            uploader: '/Mars/customer/upload',//服务器响应地址
+            multi: true,//是否多文件
+            auto: true,//是否自动上传，true，选择文件后上传，false，点击上传开始上传，默认true
+            removeCompleted: false,
+            removeTimeout: 60,
+            buttonText: "上传文件",//空间名称
+            preventCaching: false,//是否缓存
+            fileSizeLimit: 1024 * 1024 * 10,//单个文件限制大小
+            //fileTypeDesc: '*.jpg;*.png;*.doc;*.txt;*.zip;*.rar;',//文件后缀描述
+            fileTypeExts: '*.jpg;*.png;*.xls;*.pdf;*.xlsx;',//文件后缀限制
+            height: 20,//高度
+            width: 80,
+            uploadLimit: 5,
+            onUploadSuccess: function (file, data, response) {//上传成功后事件
+                data = eval('(' + data + ')');
+                if (data.ret == 1) { //data 返回值自己在后端自定义
+                    //自己的代码
+                    layer.msg(data.msg);
+                    $("#imgs").attr("src", data.data);
+                    return;
+                } else {
+                    layer.msg('上传失败');
+                    return;
+                }
+                //$(".waitImg").last().css("background", "url(" + data.data + ") no-repeat").css("background-size", "48px 48px")
+                //imgOver();
+            }
+        });
+    })
     
 </script>

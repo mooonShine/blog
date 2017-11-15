@@ -100,6 +100,17 @@ class Controller_Customer extends Base
         if($res===false)fn_ajax_return(1, "重置失败！", "");
         fn_ajax_return(0, "重置成功！", "");
     }
+    /**
+     * 上传图片
+     * 添加数据使用
+     * */
+    public function uploadAction()
+    {
+        if (!isset($_FILES['Filedata']['name'])) ajaxReturn(0, '上传错误');
+        $a = fn_upload_img('Filedata');
+        exit($a);
+
+    }
 
     /*
     * 冻结解冻

@@ -647,7 +647,7 @@ function fn_upload_img($name, $options = array(), $doUpload = true, $saveImg = '
         if (is_array($result)) {
             return json_encode(array('ret' => 1, "msg" => $result[0], "data" => ""));
         } else {
-            return json_encode(array('ret' => 0, "msg" => "", "data" => $result));
+            return json_encode(array('ret' => 1, "msg" => "上传成功", "data" => $result));
         }
     }
     $file_name = realPath(BASE_PATH . '/public' . $result);
