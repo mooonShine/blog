@@ -29,39 +29,13 @@ class Model_Class extends Smodel
      * 获取用户信息
      * */
     public function getUser($list){
-        $users = new Model_Users();
-        $userArr =array();
-        foreach ($list as $key=>$value)
-        {
-            $userArr[]= $value['user_id'];
+        if (empty($list)) return $list;
+        foreach ($list as $key => $value) {
+            $p_name = $this->get('name',['AND'=>['id' => $value['pid']]]);
+            $f_name = $this->get('name',['AND'=>['id' => $value['fid']]]);
+            $list[$key]['pid'] = isset($p_name)&&$p_name  ? $p_name : '暂无';
+            $list[$key]['fid'] = isset($f_name)&&$f_name ? $f_name : '暂无';
         }
-        $userlist = $users->select(array('id','user_name','contact','phone','flow','email'),array('id'=>$userArr));
-        if($userlist){
-            $newList =array();
-            foreach ($userlist as $k=>$v){
-                $newList[$v['id']] = $v;
-            }
-        }
-        if($list){
-            foreach ($list as $l=>$i)
-            {
-                if(isset($newList[$i['user_id']]))
-                {
-                    $list[$l]['user_name'] = $newList[$i['user_id']]['user_name'];
-                    $list[$l]['contact'] = $newList[$i['user_id']]['contact'];
-                    $list[$l]['phone'] = $newList[$i['user_id']]['phone'];
-                    $list[$l]['flow'] = $newList[$i['user_id']]['flow'];
-                    $list[$l]['email'] = $newList[$i['user_id']]['email'];
-                }else{
-                    $list[$l]['user_name'] = '未知';
-                    $list[$l]['contact'] = '未知';
-                    $list[$l]['phone'] = '无';
-                    $list[$l]['flow'] = '0';
-                    $list[$l]['email'] = '无';
-                }
-            }
-        }
-
         return $list;
     }
 
@@ -164,15 +138,26 @@ class Model_Class extends Smodel
     public function add($data = [])
     {
         if (empty($data)) return 0;
-        return $this->insert($data);
+        $data['create_time'] = time();
+        $res = $this->insert($data);
+        if ($res) {
+            return ['ret' => 1];
+        } else {
+            return ['ret' => 2];
+        }
     }
     /**
      * 删除
      * */
     public function del($id = 0)
     {
-        if (!$id) return 0;
-        return $this->delete(['id' => $id]);
+        if (!isset($id) || !$id) return 0;
+        $res = $this->update(['is_del' =>1, 'update_time' =>time()],['AND' => ['id' => $id]]);
+        if ($res) {
+            return ['ret' => 1];
+        } else {
+            return ['ret' => 0];
+        }
     }
 
 }

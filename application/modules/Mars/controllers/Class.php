@@ -32,7 +32,7 @@ class Controller_Class extends Base
         $list = $this->class->getList($condition, $p, 10);
         $this->assign('list', $list['list']);
         $this->assign('count', $list['count']);
-        $this->display('customer/index');
+        $this->display('class/index');
     }
 
     /*
@@ -42,7 +42,6 @@ class Controller_Class extends Base
     {
         if ($this->_request->isPost()) {
             $info = $this->_request->getPost();
-            $this->class->checkUser($info);
             $res = $this->class->add($info);
             if($res['ret'] == '1') {
                 fn_ajax_return(0, "添加成功！", "");
@@ -52,15 +51,8 @@ class Controller_Class extends Base
                 fn_ajax_return(2, "系统繁忙，请联系管理员！", "");
             }
         }
-        $applyId = $this->_request->getQuery('applyId');
-        $admin = new Model_Admin();
-        $agent = $admin->select(array('id','name'),array('group_id'=>1));
-        if($applyId){
-            $phone = $this->_request->getQuery('phone');
-            $this->assign('applyId',$applyId);
-            $this->assign('phone',$phone);
-        }
-        $this->assign('agent', $agent);
+        $class = $this->class->select('*',[]);
+        $this->assign('class', $class);
         $this->assign('errorMsg', $this->errorMsg);
         $this->display('class/add');
     }
@@ -69,12 +61,13 @@ class Controller_Class extends Base
      */
     public function delAction()
     {
-        $id = $this->_request->getParam('id');
-        $ids = explode(",", $id);
-        foreach ($ids as $id) {
-            $this->class->del($id);
+        $id = $this->_request->getPost('id');
+        $res = $this->class->del($id);
+        if ($res['ret'] == 1) {
+            fn_ajax_return(0, "删除成功！", "");
+        }else {
+            fn_ajax_return(1, "删除失败！", "");
         }
-        fn_js_redirect('删除成功！', '/class/index');
     }
 
     /*

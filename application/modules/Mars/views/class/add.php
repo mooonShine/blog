@@ -9,40 +9,20 @@
 </nav>
 <div class="page-container">
     <form action="/Mars/class/add" method="post" class="form form-horizontal" id="demoform-1">
-        <legend>添加充值</legend>
+        <legend>添加分类</legend>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">用户名：</label>
+            <label class="form-label col-xs-4 col-sm-3">分类名：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" autocomplete="off" placeholder="用户名" id="username">
+                <input type="text" class="input-text" autocomplete="off" placeholder="分类名" id="name" style="width: 200px;">
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">手机号：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" autocomplete="off" placeholder="手机号" id="phone">
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">充值金额：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" autocomplete="off" placeholder="充值金额" id="count">
-            </div>
-        </div>
-
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">充值类型：</label>
-            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-							<select class="select" size="1" name="demo1">
-                                <option value="3">赠送</option>
-								<option value="4">线下打款</option>
+            <label class="form-label col-xs-4 col-sm-3">父分类：</label>
+            <div class="formControls col-xs-8 col-sm-9"> <span class="select-box"  style="width: 200px;">
+							<select class="select" size="1" name="pid">
+                                <option value="0">暂无</option>
 							</select>
 							</span> </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-3">时间：</label>
-            <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text lay" autocomplete="off" placeholder="" id="timeDate">
-            </div>
         </div>
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
@@ -59,60 +39,35 @@
             min: laydate.now()
             ,istoday: false
         };
-
-        document.getElementById('timeDate').onclick = function(){
-            start.elem = this;
-            laydate(start);
-        }
     });
 
     $("#btnSub").on("click", function() {
         var data = {
-            username: $("#username").val().trim(),
-            phone: $("#phone").val().trim(),
-            count: $("#count").val().trim(),
-            type: $(".select").val(),
-            time: new Date($("#timeDate").val() + " 0:0:0").getTime() / 1000
+            name: $("#name").val().trim(),
+            pid: $(".select").val(),
         }
 
-        if(data.username == "") {
-            $("#username").addClass('error');
-            return false
-        }
-        var exc =  /^1[34578]{1}\d{9}$/;
-
-        if(data.phone == "" || !exc.test(data.phone)) {
-            $("#phone").addClass('error');
-            return false
-        }
-
-        if(data.count <= 0 || data.count == "") {
-            $("#count").addClass('error');
-            return false
-        }
-
-        if(data.time == "") {
-            $("#timeDate").addClass('error');
+        if(data.name == "") {
+            $("#name").addClass('error');
             return false
         }
 
         $.ajax({
-            url: '/Mars/finance/addRecharge',
+            url: '/Mars/class/add',
             type: 'POST',
             dataType: 'json',
             data: data,
             success: function(d) {
                 if(d.ret == 0) {// 成功
                     layer.open({
-                        content: '充值成功！',
+                        content: '添加成功！',
                         yes: function(){ location.reload(false);}
                     });
                 } else if(d.ret == 1){ //失败一定要 return false
                     layer.open({
                         content: d.msg
                     });
-                    $("#username").addClass('error');
-                    $("#phone").addClass('error');
+                    $("#name").addClass('error');
                     return false;
                 } else {
                     layer.open({
