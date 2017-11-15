@@ -68,6 +68,15 @@
             </div>
         </div>
         <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传文件：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+            <span class="btn-upload">
+                <a href="javascript:void();" onclick="upload()" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+                <input type="file" multiple name="file_0" class="input-file" value="">
+            </span>
+            </div>
+        </div>
+        <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>金额转换流量比率：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="text" class="input-text" value="" placeholder="每pv对应价格" id="frate" name="frate">
