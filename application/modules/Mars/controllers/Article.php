@@ -43,14 +43,7 @@ class Controller_Article extends Base
     {
         if ($this->_request->isPost()) {
             $info = $this->_request->getPost();
-            $this->user->checkUser($info);
-            $res = $this->article->addUser($info);
-            if(isset($info['applyId']) && $info['applyId'])
-            {
-                $info['id'] = $info['applyId'];
-                $info['status'] = 3;
-                $this->apply->applyStatus($info);
-            }
+            $res = $this->article->addArticle($info);
             if($res['ret'] == '1') {
                 fn_ajax_return(0, "添加成功！", "");
             } else if($res['ret'] == '2') {
@@ -59,15 +52,9 @@ class Controller_Article extends Base
                 fn_ajax_return(2, "系统繁忙，请联系管理员！", "");
             }
         }
-        $applyId = $this->_request->getQuery('applyId');
-        $admin = new Model_Admin();
-        $agent = $admin->select(array('id','name'),array('group_id'=>1));
-        if($applyId){
-            $phone = $this->_request->getQuery('phone');
-            $this->assign('applyId',$applyId);
-            $this->assign('phone',$phone);
-        }
-        $this->assign('agent', $agent);
+        $class = new Model_Class();
+        $class_arr = $class->select(['id','name'],['is_del'=>0]);
+        $this->assign('class', $class_arr);
         $this->assign('errorMsg', $this->errorMsg);
         $this->display('article/add');
     }

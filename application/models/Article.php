@@ -25,26 +25,19 @@ class Model_Article extends Smodel
     }
 
     /**
-     * 添加客户
+     * 添加文章
      */
-    public function addUser($infos)
+    public function addArticle($infos)
     {
         $this->_checkData($infos);
         $data=array(
-            'user_type'=>$infos['user_type'],
-            'user_name'=>$infos['user_name'],
-            'password'=>md5($infos['password']),
-            'real_name'=>$infos['real_name'],
-            'contact'=>$infos['contact'],
-            'phone'=>$infos['phone'],
-            'email'=>$infos['email'],
-            'frate'=>$infos['frate'],
-            'pid'=>$infos['pid'],
+            'title'=>$infos['title'],
+            'class_id'=>$infos['class_id'],
+            'pid'=>$infos['pic'],
+            'content'=>$infos['content'],
+            'signature'=>$infos['signature'],
             'create_time'=>time()
         );
-        if($data['user_type']==1){
-            $data['real_name']=$infos['contact'];
-        }
         $list = $this->insert($data);
         if($list){
             return array('ret'=>'1');
@@ -116,17 +109,12 @@ class Model_Article extends Smodel
     {
         if(!$condition)return array();
         $where =array();
-        if(isset($condition['username']) && $condition['username']){
-            $where['AND']['OR']['email[~]'] = $condition['username'];
-            $where['AND']['OR']['user_name[~]'] = $condition['username'];
-            $where['AND']['OR']['phone[~]'] = $condition['username'];
-            $where['AND']['OR']['real_name[~]'] = $condition['username'];
+        if(isset($condition['name']) && $condition['name']){
+            $where['AND']['OR']['title[~]'] = $condition['title'];
+            $where['AND']['OR']['signature[~]'] = $condition['signature'];
         }
-        if(isset($condition['status']) && $condition['status']){
-            $where['AND']['status'] = $condition['status'];
-            if($condition['status']==2){
-                $where['AND']['status'] = 0;
-            }
+        if(isset($condition['is_del']) && $condition['is_del']){
+            $where['AND']['is_del'] = $condition['is_del'];
         }
         if(isset($condition['start_date'])&& $condition['start_date']){
             $where['AND']['create_time[>=]'] = strtotime($condition['start_date']. ' 00:00:00');
@@ -140,26 +128,14 @@ class Model_Article extends Smodel
     /**
      * 连接外表
      */
-    public function externalConnection($list,$condition) {
-        if(isset($condition['start_date'])&& $condition['start_date']){
-            $where['AND']['date[>=]'] = strtotime($condition['start_date']. ' 00:00:00');
-        }
-        if(isset($condition['end_date']) && $condition['end_date']){
-            $where['AND']['date[<=]'] = strtotime($condition['end_date']. ' 23:59:59');
-        }
-        $where['AND']['type']=2;
+    public function externalConnection($list) {
         if(empty($list)) {
             return array();
         }
-        $finance = new Model_Finance();
-        $admin = new Model_Admin();
+        $class = new Model_Class();
         foreach($list as $k=>$v) {
-            $where['AND']['uid'] = $v['id'];
-            $list[$k]['remain_money'] = $finance->get('remain_money',$where);
-            $wheres['AND']['id'] =$v['pid'];
-            $list[$k]['agent_name'] = $admin->get('name',$wheres);
-            $list[$k]['total_money'] = $finance->sum('money',$where);
-            $list[$k]['recharge_count'] = $finance->count($where);
+            $list[$k]['class_id'] = $class->get('name',['id' => $v['class_id']]);
+            $list[$k]['content'] = isset($v['content']{50}) ? substr($v['content'], 0, 50) . '...' : $v['content'];
         }
         return $list;
     }

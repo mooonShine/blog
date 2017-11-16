@@ -14,15 +14,15 @@
             开始日：<input type="text" name="start_date" class="laydate-icon" id="start" value="<?php if(fn_get_val('start_date')){ echo fn_get_val('start_date');}else{ echo date('Y-m-01', strtotime(date("Y-m-d")));} ?>" />
             结束日：<input type="text" name="end_date" class="laydate-icon" id="end" value="<?php if(fn_get_val('end_date')){ echo fn_get_val('end_date');}else{ echo date('Y-m-d',time());} ?>" />
 
-            <select name="status" id="status" class="select" style="width: 100px">
-                <option  value="">用户状态</option>
-                <option value="1" <?php if(fn_get_val("status")==1){ echo 'selected';}?>>已冻结</option>
-                <option value="2" <?php if(fn_get_val("status")==2){ echo 'selected';}?>>正常</option>
+            <select name="is_del" id="is_del" class="select" style="width: 100px">
+                <option  value="">文章状态</option>
+                <option value="1" <?php if(fn_get_val("is_del")==1){ echo 'selected';}?>>正常</option>
+                <option value="2" <?php if(fn_get_val("is_del")==2){ echo 'selected';}?>>已删除</option>
             </select>
 
-            <input type="text" value="<?php echo fn_get_val("username"); ?>" name="username" id="" placeholder="客户名/邮箱/手机号/公司名称"
+            <input type="text" value="<?php echo fn_get_val("name"); ?>" name="name" id="" placeholder="文章名/署名"
                    style="width:250px" class="input-text">
-            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜客户
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜文章
             </button>
         </form>
     </div>
@@ -30,8 +30,8 @@
         <span class="l">
 <!--            <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius">-->
 <!--                <i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>-->
-            <a class="btn btn-primary radius" data-title="添加客户" onclick="group_open('添加客户','/customer/add')" href="javascript:;">
-                <i class="Hui-iconfont">&#xe600;</i> 添加客户</a>
+            <a class="btn btn-primary radius" data-title="添加文章" onclick="group_open('添加文章','/Mars/article/add')" href="javascript:;">
+                <i class="Hui-iconfont">&#xe600;</i> 添加文章</a>
         </span>
         <span class="r"></span>
     </div>
@@ -41,19 +41,12 @@
             <tr class="text-c">
                 <th width="25"><input type="checkbox" name="" value=""></th>
                 <th width="40">ID</th>
-                <th width="190">注册时间</th>
-                <th width="80">用户名</th>
-                <th width="80">联系人</th>
-                <th width="120">手机号</th>
-                <th width="180">邮箱</th>
-                <th width="120">公司名称/真实姓名</th>
-                <th width="120">最近登录</th>
-                <th width="80">会员等级</th>
-                <th width="50" id="frate">流量比率<i class="Hui-iconfont">&#xe633;</i></th>
-                <th width="50" >剩余流量</th>
-                <th width="50" >所属代理</th>
-                <th width="50">充值次数</th>
-                <th width="60">充值总额</th>
+                <th width="100">添加时间</th>
+                <th width="100">标题</th>
+                <th width="100">所属分类</th>
+                <th width="120">图片</th>
+                <th width="200">内容</th>
+                <th width="80">是否删除</th>
                 <th width="50">操作</th>
             </tr>
             </thead>
@@ -63,34 +56,20 @@
                     <td><input type="checkbox" value="<?php echo $value['id']; ?>" name=""></td>
                     <td><?php echo $value['id']; ?></td>
                     <td class="text-c"><?php echo $value['create_time']?date("Y-m-d H:i:s", $value['create_time']):'-'; ?></td>
-                    <td class="text-c"><?php echo $value['user_name']?$value['user_name']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['contact']?$value['contact']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['phone']?$value['phone']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['email']?$value['email']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['real_name']?$value['real_name']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['last_login_time']?date("Y-m-d H:i:s", $value['last_login_time']):'无记录'; ?></td>
-                    <td class="text-c"><?php echo $value['user_rank']==1?'大众会员':''; ?></td>
-                    <td class="text-c frate" uid="<?php echo $value['id'];?>"><?php echo $value['frate']; ?></td>
-                    <td class="text-c"><?php echo $value['flow']?$value['flow']:0; ?></td>
-                    <td class="text-c"><?php echo $value['agent_name']?$value['agent_name']:0; ?></td>
-                    <td class="text-c"><?php echo $value['recharge_count']?$value['recharge_count']:0; ?></td>
-                    <td class="text-c"><?php echo $value['total_money']?$value['total_money']:'0.00'; ?></td>
+                    <td class="text-c"><?php echo $value['title']?$value['title']:'-'; ?></td>
+                    <td class="text-c"><?php echo $value['class_id']?$value['class_id']:'-'; ?></td>
+                    <td class="text-c"> <img src="<?php echo $value['pic'] ?>" class="showObj" alt="" style="display: none;position: absolute;top: 0px;left: 60px;width: 300px;height: 250px"></td>
+                    <td class="text-c"><?php echo $value['content']?$value['content']:'-'; ?></td>
+                    <td class="text-c"><?php echo $value['is_del']==1?'正常':'已删除'; ?></td>
                     <td class="f-14 td-manage">
                         <a style="text-decoration:none" class="ml-5 delBtn" oid="<?php echo $value['id']; ?>"
-                           href="javascript:;" title="重置密码">
+                           href="javascript:;" title="修改">
                             <i class="Hui-iconfont">&#xe6df;</i>
                         </a>
-                        <?php if(isset($value['id'])&&$value['status']==1){?>
                         <a style="text-decoration:none" class="ml-5 statusBtn" status="0" oid="<?php echo $value['id']; ?>"
-                           href="javascript:;" title="解冻">
+                           href="javascript:;" title="删除">
                             <i class="Hui-iconfont" style="color: #00B83F">&#xe605;</i>
                         </a>
-                    <?php }else{ ?>
-                        <a style="text-decoration:none" class="ml-5 statusBtn" status="1" oid="<?php echo $value['id']; ?>"
-                           href="javascript:;" title="冻结">
-                            <i class="Hui-iconfont" style="color: #c62b26">&#x1006;</i>
-                        </a>
-                    <?php }?>
                     </td>
                 </tr>
             <?php endforeach;endif; ?>

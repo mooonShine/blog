@@ -36,8 +36,8 @@
             <div class="formControls col-xs-8 col-sm-9">
                 <select name="class_id" id="class_id" class="select" style="width: 100px">
                     <option value="0">无</option>
-                    <?php if($agent){
-                        foreach ($agent as $key=>$value){
+                    <?php if($class){
+                        foreach ($class as $key=>$value){
                             ?>
                             <option value="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></option>
                         <?php } } ?>
@@ -48,6 +48,7 @@
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传文件：</label>
             <div class="formControls col-xs-8 col-sm-9" >
                 <img alt="" id="imgs" class="radius" style="width: 60px;height: 60px;float: left;">
+                <input type="hidden" name="pid" id="pic" value="">
                 <span class="btn-upload" style="padding-top: 20px">
 <!--                <a href="javascript:void();" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>-->
                 <input type="file" multiple name="m_pic" class="input-file" value="" id="uploadfy">
@@ -303,6 +304,7 @@
                     //自己的代码
                     layer.msg(data.msg);
                     $("#imgs").attr("src", data.data);
+                    $("#pic").val(data.data);
                     return;
                 } else {
                     layer.msg('上传失败');
