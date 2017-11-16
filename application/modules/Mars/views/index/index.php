@@ -24,16 +24,16 @@
     <script type="text/javascript" src="http:///admin/lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
-    <title>房产云后台</title>
+    <title>清风自来</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
 </head>
 <body>
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
-        <div class="container-fluid cl"><a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">管理后台</a>
+        <div class="container-fluid cl"><a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">清风自来</a>
             <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a> <span
-                    class="logo navbar-slogan f-l mr-10 hidden-xs">v2.5</span> <a aria-hidden="false"
+                    class="logo navbar-slogan f-l mr-10 hidden-xs">后台</span> <a aria-hidden="false"
                                                                                   class="nav-toggle Hui-iconfont visible-xs"
                                                                                   href="javascript:;">&#xe667;</a>
             <nav class="nav navbar-nav">
@@ -83,35 +83,35 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-admin">
-            <dt><i class="Hui-iconfont ">&#xe62d;</i> 客户中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="/Mars/customer/add" data-title="客户添加" href="javascript:void(0)">客户添加</a></li>
-                    <li><a data-href="/Mars/customer/index" data-title="客户列表" href="javascript:void(0)">客户列表</a></li>
-                    <li><a data-href="/Mars/customer/apply" data-title="客户申请" href="javascript:void(0)">客户申请</a></li>
-                </ul>
-            </dd>
-        </dl>
-        <dl id="menu-admin">
-            <dt><i class="Hui-iconfont ">&#xe62d;</i> 广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="/Mars/advert/check" data-title="广告审核" href="javascript:void(0)">广告审核</a></li>
-                    <li><a data-href="/Mars/advert/list" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>
-                </ul>
-            </dd>
-        </dl>
-        <dl id="menu-admin">
-            <dt><i class="Hui-iconfont ">&#xe62d;</i> 财务中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a data-href="/Mars/finance/addRecharge" data-title="添加充值" href="javascript:void(0)">添加充值</a></li>
-                    <li><a data-href="/Mars/finance/rechargeRecord" data-title="充值记录" href="javascript:void(0)">充值记录</a></li>
-                    <li><a data-href="/Mars/finance/costRecord" data-title="消费记录" href="javascript:void(0)">消费记录</a></li>
-                </ul>
-            </dd>
-        </dl>
+<!--        <dl id="menu-admin">-->
+<!--            <dt><i class="Hui-iconfont ">&#xe62d;</i> 客户中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
+<!--            <dd>-->
+<!--                <ul>-->
+<!--                    <li><a data-href="/Mars/customer/add" data-title="客户添加" href="javascript:void(0)">客户添加</a></li>-->
+<!--                    <li><a data-href="/Mars/customer/index" data-title="客户列表" href="javascript:void(0)">客户列表</a></li>-->
+<!--                    <li><a data-href="/Mars/customer/apply" data-title="客户申请" href="javascript:void(0)">客户申请</a></li>-->
+<!--                </ul>-->
+<!--            </dd>-->
+<!--        </dl>-->
+<!--        <dl id="menu-admin">-->
+<!--            <dt><i class="Hui-iconfont ">&#xe62d;</i> 广告管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
+<!--            <dd>-->
+<!--                <ul>-->
+<!--                    <li><a data-href="/Mars/advert/check" data-title="广告审核" href="javascript:void(0)">广告审核</a></li>-->
+<!--                    <li><a data-href="/Mars/advert/list" data-title="广告列表" href="javascript:void(0)">广告列表</a></li>-->
+<!--                </ul>-->
+<!--            </dd>-->
+<!--        </dl>-->
+<!--        <dl id="menu-admin">-->
+<!--            <dt><i class="Hui-iconfont ">&#xe62d;</i> 财务中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
+<!--            <dd>-->
+<!--                <ul>-->
+<!--                    <li><a data-href="/Mars/finance/addRecharge" data-title="添加充值" href="javascript:void(0)">添加充值</a></li>-->
+<!--                    <li><a data-href="/Mars/finance/rechargeRecord" data-title="充值记录" href="javascript:void(0)">充值记录</a></li>-->
+<!--                    <li><a data-href="/Mars/finance/costRecord" data-title="消费记录" href="javascript:void(0)">消费记录</a></li>-->
+<!--                </ul>-->
+<!--            </dd>-->
+<!--        </dl>-->
         <dl id="menu-admin">
             <dt><i class="Hui-iconfont ">&#xe62d;</i> 分类中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -122,14 +122,23 @@
             </dd>
         </dl>
         <dl id="menu-admin">
-            <dt><i class="Hui-iconfont ">&#xe62d;</i> 数据中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont ">&#xe62d;</i> 文章管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a data-href="/Mars/report/index" data-title="pc广告" href="javascript:void(0)">pc广告</a></li>
-                    <li><a data-href="/Mars/report/pcToday" data-title="今日实时" href="javascript:void(0)">今日实时</a></li>
+                    <li><a data-href="/Mars/article/add" data-title="文章添加" href="javascript:void(0)">文章添加</a></li>
+                    <li><a data-href="/Mars/article/index" data-title="文章列表" href="javascript:void(0)">文章列表</a></li>
                 </ul>
             </dd>
         </dl>
+<!--        <dl id="menu-admin">-->
+<!--            <dt><i class="Hui-iconfont ">&#xe62d;</i> 数据中心<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>-->
+<!--            <dd>-->
+<!--                <ul>-->
+<!--                    <li><a data-href="/Mars/report/index" data-title="pc广告" href="javascript:void(0)">pc广告</a></li>-->
+<!--                    <li><a data-href="/Mars/report/pcToday" data-title="今日实时" href="javascript:void(0)">今日实时</a></li>-->
+<!--                </ul>-->
+<!--            </dd>-->
+<!--        </dl>-->
 
     </div>
 </aside>
