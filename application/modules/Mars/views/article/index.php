@@ -44,8 +44,8 @@
                 <th width="100">添加时间</th>
                 <th width="100">标题</th>
                 <th width="100">所属分类</th>
-                <th width="120">图片</th>
-                <th width="200">内容</th>
+                <th width="60">图片</th>
+                <th width="250">内容</th>
                 <th width="80">是否删除</th>
                 <th width="50">操作</th>
             </tr>
@@ -58,7 +58,7 @@
                     <td class="text-c"><?php echo $value['create_time']?date("Y-m-d H:i:s", $value['create_time']):'-'; ?></td>
                     <td class="text-c"><?php echo $value['title']?$value['title']:'-'; ?></td>
                     <td class="text-c"><?php echo $value['class_id']?$value['class_id']:'-'; ?></td>
-                    <td class="text-c"> <img src="<?php echo $value['pic'] ?>" class="showObj" alt="" style="display: none;position: absolute;top: 0px;left: 60px;width: 300px;height: 250px"></td>
+                    <td class="text-c"> <img src="<?php echo $value['pic'] ?>" class="showObj" alt="" style="width: 40px;height: 40px"></td>
                     <td class="text-c"><?php echo $value['content']?$value['content']:'-'; ?></td>
                     <td class="text-c"><?php echo $value['is_del']==1?'正常':'已删除'; ?></td>
                     <td class="f-14 td-manage">

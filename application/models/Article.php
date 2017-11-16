@@ -33,12 +33,13 @@ class Model_Article extends Smodel
         $data=array(
             'title'=>$infos['title'],
             'class_id'=>$infos['class_id'],
-            'pid'=>$infos['pic'],
+            'pic'=>$infos['pic'],
             'content'=>$infos['content'],
             'signature'=>$infos['signature'],
             'create_time'=>time()
         );
         $list = $this->insert($data);
+        echo $this->last_query();die;
         if($list){
             return array('ret'=>'1');
         }else{
@@ -79,26 +80,21 @@ class Model_Article extends Smodel
      */
     private function _checkData($data)
     {
-        if (empty($data['user_name'])) {
-            fn_ajax_return(1, "用户名必填！", "");
+        if (!isset($data['title']) || !$data['title']) {
+            fn_ajax_return(1, "标题必填！", "");
         }
-        if ($data['password'] == "") {
-            fn_ajax_return(1, "密码必填！", "");
+        if (!isset($data['class_id']) || !$data['class_id']) {
+            fn_ajax_return(1, "分类必选！", "");
         }
-        if (empty($data['phone'])) {
-            fn_ajax_return(1, "手机号必填！", "");
+        if (!isset($data['pic']) || !$data['pic']) {
+            fn_ajax_return(1, "图片必须上传！", "");
         }
-        if ($data['email'] == "") {
-            fn_ajax_return(1, "邮箱必填！", "");
+        if (!isset($data['content']) || !$data['content']) {
+            fn_ajax_return(1, "内容必填！", "");
         }
 
-        if ($data['repassword'] != $data['password']) {
-            fn_ajax_return(1, "两次密码不一致！", "");
-        }
-        if (!is_numeric($data['frate'])) {
-            if(!is_float($data['frate'])){
-                fn_ajax_return(1, "转换比率不合法！", "");
-            }
+        if (!isset($data['signature']) || !$data['signature']) {
+            fn_ajax_return(1, "署名必填！", "");
         }
     }
 

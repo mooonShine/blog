@@ -48,7 +48,7 @@
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传文件：</label>
             <div class="formControls col-xs-8 col-sm-9" >
                 <img alt="" id="imgs" class="radius" style="width: 60px;height: 60px;float: left;">
-                <input type="hidden" name="pid" id="pic" value="">
+                <input type="hidden" name="pic" id="pic" value="">
                 <span class="btn-upload" style="padding-top: 20px">
 <!--                <a href="javascript:void();" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>-->
                 <input type="file" multiple name="m_pic" class="input-file" value="" id="uploadfy">
@@ -203,55 +203,43 @@
     //        rules: rules
     //    })
     //    $("#real_name").rules()
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 或者 var editor = new E( document.getElementById('#editor') )
+    editor.create();
 
     $("#btnSub").on("click", function() {
         var data = {
-            title: $("input[name='user_type']:checked").val().trim(),
-            user_name: $("#user_name").val().trim(),
-            password: $("#password").val().trim(),
-            repassword: $("#repassword").val().trim(),
-            real_name: $("#real_name").val().trim(),
-            contact: $("#contact").val().trim(),
-            phone: $("#phone").val().trim(),
-            email: $("#email").val().trim(),
-            frate: $("#frate").val().trim(),
-            applyId: $("#applyId").val().trim(),
-            pid: $("#pid").val().trim()
+//            title: $("input[name='title']:checked").val().trim(),
+            title: $("#title").val().trim(),
+            class_id: $("#class_id").val().trim(),
+            pic: $("#pic").val().trim(),
+            content: editor.txt.html(),
+            signature: $("#signature").val().trim(),
         }
-        var succ_url='/Mars/customer/index';
-        if(data.user_name == ""||data.user_name ==null||data.user_name ==undefined) {
-            $("#user_name").addClass('error');
+        var succ_url='/Mars/article/index';
+        if(data.title == ""||data.title ==null||data.title ==undefined) {
+            $("#title").addClass('error');
             return false
         }
-        if(data.password == ""||data.password ==null||data.password ==undefined) {
-            $("#password").addClass('error');
+        if(data.class_id == ""||data.class_id ==null||data.class_id ==undefined) {
+            $("#class_id").addClass('error');
             return false
         }
-        if(data.contact == ""||data.contact ==null||data.contact ==undefined) {
-            $("#contact").addClass('error');
+        if(data.pic == ""||data.pic ==null||data.pic ==undefined) {
+            $("#pic").addClass('error');
             return false
         }
-        if(data.phone == ""||data.phone ==null||data.phone ==undefined) {
-            $("#phone").addClass('error');
+        if(data.content == ""||data.content ==null||data.content ==undefined) {
+            $("#content").addClass('error');
             return false
         }
-        if(data.email == ""||data.email ==null||data.email ==undefined) {
-            $("#email").addClass('error');
-            return false
-        }
-        if(data.frate == ""||data.frate ==null||data.frate ==undefined) {
-            $("#frate").addClass('error');
-            return false
-        }
-
-        var exc =  /^1[34578]{1}\d{9}$/;
-
-        if(data.phone == "" || !exc.test(data.phone)) {
-            $("#phone").addClass('error');
+        if(data.signature == ""||data.signature ==null||data.signature ==undefined) {
+            $("#signature").addClass('error');
             return false
         }
         $.ajax({
-            url: '/Mars/customer/add',
+            url: '/Mars/article/add',
             type: 'POST',
             dataType: 'json',
             data: data,
@@ -276,11 +264,6 @@
         })
     })
     $(function () {
-
-        var E = window.wangEditor
-        var editor = new E('#editor')
-        // 或者 var editor = new E( document.getElementById('#editor') )
-        editor.create();
 
         //图片上传
         $("#uploadfy").uploadify({
