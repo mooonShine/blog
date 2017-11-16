@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>后台登录</title>
+<title>程序小屋</title>
 <meta name="author" content="DeathGhost" />
 <link rel="stylesheet" type="text/css" href="/admin/css/style.css" tppabs="/css/style.css" />
 <style>
@@ -86,7 +86,7 @@ function reload() {
 <body>
 <dl class="admin_login">
  <dt>
-  <strong>站点后台管理系统</strong>
+  <strong>程序小屋</strong>
   <em>Management System</em>
  </dt>
  <dd class="user_icon">
