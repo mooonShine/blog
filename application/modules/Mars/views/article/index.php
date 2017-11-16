@@ -60,16 +60,28 @@
                     <td class="text-c"><?php echo $value['class_id']?$value['class_id']:'-'; ?></td>
                     <td class="text-c"> <img src="<?php echo $value['pic'] ?>" class="showObj" alt="" style="width: 40px;height: 40px"></td>
                     <td class="text-c"><?php echo $value['content']?$value['content']:'-'; ?></td>
-                    <td class="text-c"><?php echo $value['is_del']==1?'正常':'已删除'; ?></td>
+                    <td class="text-c"><?php if ($value['is_del'] == 1) {?>
+                        <input class="btn btn-success radius" type="button" value="正常">
+                    <?php }else{?>
+                            <input class="btn btn-danger radius" type="button" value="已删除">
+                        <?php }?>
+                    </td>
                     <td class="f-14 td-manage">
                         <a style="text-decoration:none" class="ml-5 delBtn" oid="<?php echo $value['id']; ?>"
-                           href="javascript:;" title="修改">
+                           href="javascript:;" title="修改" onclick="group_open('添加文章','/Mars/article/add?id='+<?php echo $value['id']; ?>)">
                             <i class="Hui-iconfont">&#xe6df;</i>
                         </a>
-                        <a style="text-decoration:none" class="ml-5 statusBtn" status="0" oid="<?php echo $value['id']; ?>"
-                           href="javascript:;" title="删除">
-                            <i class="Hui-iconfont" style="color: #00B83F">&#xe605;</i>
-                        </a>
+                        <?php if(isset($value['id'])&&$value['is_del']==1){?>
+                            <a style="text-decoration:none" class="ml-5 statusBtn" status="2" oid="<?php echo $value['id']; ?>"
+                               href="javascript:;" title="删除">
+                                <i class="Hui-iconfont" style="color: #00B83F">&#xe605;</i>
+                            </a>
+                        <?php }else{ ?>
+                            <a style="text-decoration:none" class="ml-5 statusBtn" status="1" oid="<?php echo $value['id']; ?>"
+                               href="javascript:;" title="恢复">
+                                <i class="Hui-iconfont" style="color: #c62b26">&#x1006;</i>
+                            </a>
+                        <?php }?>
                     </td>
                 </tr>
             <?php endforeach;endif; ?>
@@ -116,46 +128,12 @@
         event.returnValue=false;
     }
     $(function () {
-        $('.delBtn').click(function () {
-            var succ_url='/Mars/article/index';
-            var oid = $(this).attr('oid');
-            layer.msg('是否确定重置密码？', {
-                time: 0 //不自动关闭
-                ,btn: ['确定', '取消']
-                ,yes: function(index){
-                    $.ajax({
-                        url: '/Mars/article/reset',
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {'id':oid},
-                        success: function(d) {
-                            if(d.ret == 0) {// 成功
-                                layer.open({
-                                    content: '重置成功！',
-                                    yes: function(){ location.href=succ_url;}
-                                });
-                            } else if(d.ret == 1){ //失败一定要 return false
-                                layer.open({
-                                    content: d.msg
-                                });
-                                return false;
-                            } else {
-                                layer.open({
-                                    content: d.msg
-                                });
-                                return false;
-                            }
-                        }
-                    })
-                }
-            });
-        })
         //冻结和解冻
         $('.statusBtn').click(function () {
             var succ_url='/Mars/article/index';
             var oid = $(this).attr('oid');
             var status = $(this).attr('status');
-            var info=status==1?'冻结':'解冻';
+            var info=status==1?'删除':'恢复';
             layer.msg('确定'+info+'？', {
                 time: 0 //不自动关闭
                 ,btn: ['确定', '取消']

@@ -59,14 +59,14 @@ class Controller_Article extends Base
         $this->display('article/add');
     }
     /*
-     * 删除用户
+     * 删除文章
      */
     public function delAction()
     {
         $id = $this->_request->getParam('id');
         $ids = explode(",", $id);
         foreach ($ids as $id) {
-            $this->user->delUser($id);
+            $this->article->del($id);
         }
         fn_js_redirect('删除成功！', '/article/index');
     }
@@ -98,7 +98,7 @@ class Controller_Article extends Base
     }
 
     /*
-    * 冻结解冻
+    * 删除恢复
     */
     public function statusAction()
     {
@@ -108,7 +108,7 @@ class Controller_Article extends Base
         if(!$id||!is_numeric($id)){
             fn_ajax_return(1, "参数错误！", "");
         }
-        $res=$this->user->update(array('status'=>$status),array('id'=>$id));
+        $res=$this->article->update(array('is_del'=>$status),array('id'=>$id));
         if($res===false)fn_ajax_return(1, $info."失败！", "");
         fn_ajax_return(0, $info."成功！", "");
     }

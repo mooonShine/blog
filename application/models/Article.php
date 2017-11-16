@@ -147,9 +147,9 @@ class Model_Article extends Smodel
     /*
      * 伪删除
      */
-    public function deluser($id)
+    public function del($id)
     {
-        return $this->update(['deleted'=>1],['id'=>$id]);
+        return $this->update(['is_del'=>2],['id'=>$id]);
     }
 
 }
