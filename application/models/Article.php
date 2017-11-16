@@ -39,7 +39,28 @@ class Model_Article extends Smodel
             'create_time'=>time()
         );
         $list = $this->insert($data);
-        echo $this->last_query();die;
+        if($list){
+            return array('ret'=>'1');
+        }else{
+            return array('ret'=>'2');
+        }
+    }
+
+    /**
+     * 修改文章
+     */
+    public function editArticle($infos)
+    {
+        $this->_checkData($infos);
+        $data=array(
+            'title'=>$infos['title'],
+            'class_id'=>$infos['class_id'],
+            'pic'=>$infos['pic'],
+            'content'=>$infos['content'],
+            'signature'=>$infos['signature'],
+            'update_time'=>time()
+        );
+        $list = $this->update($data, ['id' => $infos['id']]);
         if($list){
             return array('ret'=>'1');
         }else{

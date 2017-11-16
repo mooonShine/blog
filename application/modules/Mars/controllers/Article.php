@@ -43,17 +43,33 @@ class Controller_Article extends Base
     {
         if ($this->_request->isPost()) {
             $info = $this->_request->getPost();
-            $res = $this->article->addArticle($info);
-            if($res['ret'] == '1') {
-                fn_ajax_return(0, "添加成功！", "");
-            } else if($res['ret'] == '2') {
-                fn_ajax_return(1, "添加失败！", "");
-            }else {
-                fn_ajax_return(2, "系统繁忙，请联系管理员！", "");
+            if (isset($info['id'])) {
+                $res = $this->article->editArticle($info);
+                if($res['ret'] == '1') {
+                    fn_ajax_return(0, "修改成功！", "");
+                } else if($res['ret'] == '2') {
+                    fn_ajax_return(1, "修改失败！", "");
+                }else {
+                    fn_ajax_return(2, "系统繁忙，请联系管理员！", "");
+                }
+            } else {
+                $res = $this->article->addArticle($info);
+                if($res['ret'] == '1') {
+                    fn_ajax_return(0, "添加成功！", "");
+                } else if($res['ret'] == '2') {
+                    fn_ajax_return(1, "添加失败！", "");
+                }else {
+                    fn_ajax_return(2, "系统繁忙，请联系管理员！", "");
+                }
             }
+        }
+        $info = $this->_request->getQuery('id');
+        if (isset($info) && $info && is_numeric($info)) {
+            $info = $this->article->get('*', ['id' =>$info]);
         }
         $class = new Model_Class();
         $class_arr = $class->select(['id','name'],['is_del'=>0]);
+        $this->assign('info', isset($info) ? $info : []);
         $this->assign('class', $class_arr);
         $this->assign('errorMsg', $this->errorMsg);
         $this->display('article/add');
@@ -69,21 +85,6 @@ class Controller_Article extends Base
             $this->article->del($id);
         }
         fn_js_redirect('删除成功！', '/article/index');
-    }
-
-    /*
-     * 重置密码
-     */
-    public function resetAction()
-    {
-        $id = $this->_request->getPost('id');
-        if(!$id||!is_numeric($id)){
-            fn_ajax_return(1, "参数错误！", "");
-        }
-        $pwd=md5('a1234567');
-        $res=$this->user->update(array('password'=>$pwd),array('id'=>$id));
-        if($res===false)fn_ajax_return(1, "重置失败！", "");
-        fn_ajax_return(0, "重置成功！", "");
     }
     /**
      * 上传图片
@@ -111,68 +112,5 @@ class Controller_Article extends Base
         $res=$this->article->update(array('is_del'=>$status),array('id'=>$id));
         if($res===false)fn_ajax_return(1, $info."失败！", "");
         fn_ajax_return(0, $info."成功！", "");
-    }
-
-    /*
-     * 修改比率
-     */
-    public function editFrateAction()
-    {
-        $id = $this->_request->getPost('uid');
-        $frate= $this->_request->getPost('frate');
-        if(!$id||!is_numeric($id)||!$frate||!is_numeric($frate)){
-            fn_ajax_return(1, "参数错误！", "");
-        }
-        $res=$this->user->update(array('frate'=>$frate),array('id'=>$id));
-        if($res===false)fn_ajax_return(1, "修改失败！", "");
-        fn_ajax_return(0, "修改成功！", "");
-    }
-    /**
-     * 用户名,手机号,邮箱验证
-     */
-    public function verificationAction(){
-        $info = $this->_request->getPost();
-        $this->user->checkUser($info);
-        fn_ajax_return(0, "验证通过！", "");
-    }
-
-    /**
-     * 客户申请
-     * */
-    public function applyAction()
-    {
-        $p = fn_get_val('p', 1);
-        $condition['is_delete'] = 0;
-        $list = $this->apply->getList($condition,$p, 10);
-        $this->assign('list', $list['list']);
-        $this->assign('count', $list['count']);
-        $this->display('article/apply');
-    }
-
-    /**
-     * 客户不合格
-     * */
-    public function applyCheckAction()
-    {
-        $id = $this->_request->getPost('id');
-        if(!$id) fn_ajax_return(1, "参数不对！", "");
-        $info['id'] = $id;
-        $info['status'] = 1;
-        $info['is_delete'] = 1;
-        $this->apply->applyStatus($info);
-        fn_ajax_return(0, "设置成功！", "");
-    }
-
-    /**
-     * 客户保留
-     * */
-    public function applyConfirmAction()
-    {
-        $id = $this->_request->getPost('id');
-        if(!$id) fn_ajax_return(1, "参数不对！", "");
-        $info['id'] = $id;
-        $info['status'] = 2;
-        $this->apply->applyStatus($info);
-        fn_ajax_return(0, "设置成功！", "");
     }
 }

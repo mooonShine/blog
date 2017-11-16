@@ -28,18 +28,17 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" value="<?php echo fn_get_val("title") ?>" placeholder="请输入标题" id="title" name="title">
+                <input type="text" class="input-text" value="<?php echo isset($info['title']) ? $info['title'] : '' ?>" placeholder="请输入标题" id="title" name="title">
             </div>
         </div>
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章分类：</label>
             <div class="formControls col-xs-8 col-sm-9">
                 <select name="class_id" id="class_id" class="select" style="width: 100px">
-                    <option value="0">无</option>
                     <?php if($class){
                         foreach ($class as $key=>$value){
                             ?>
-                            <option value="<?php echo $value['id'] ?>"><?php echo $value['name'] ?></option>
+                            <option value="<?php echo $value['id'] ?>"  <?php if(isset($info['class_id']) && ($info['class_id']==$value['id'])){ echo 'selected';}?>><?php echo $value['name'] ?></option>
                         <?php } } ?>
                 </select>
             </div>
@@ -47,8 +46,8 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>上传文件：</label>
             <div class="formControls col-xs-8 col-sm-9" >
-                <img alt="" id="imgs" class="radius" style="width: 60px;height: 60px;float: left;">
-                <input type="hidden" name="pic" id="pic" value="">
+                <img alt="" id="imgs" src="<?php echo isset($info['pic']) ? $info['pic'] : '' ?>" class="radius" style="width: 60px;height: 60px;float: left;">
+                <input type="hidden" name="pic" id="pic" value="<?php echo isset($info['pic']) ? $info['pic'] : '' ?>">
                 <span class="btn-upload" style="padding-top: 20px">
 <!--                <a href="javascript:void();" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>-->
                 <input type="file" multiple name="m_pic" class="input-file" value="" id="uploadfy">
@@ -58,15 +57,17 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章内容：</label>
             <div class="formControls col-xs-8 col-sm-9"  id="editor">
+                <p><?php echo isset($info['content']) ? $info['content'] : '' ?></p>
             </div>
         </div>
 
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>署名：</label>
             <div class="formControls col-xs-8 col-sm-9">
-                <input type="text" class="input-text" id="signature" name="signature" value="<?php echo fn_get_val("signature") ?>" placeholder="请输入署名">
+                <input type="text" class="input-text" id="signature" name="signature" value="<?php echo isset($info['signature']) ? $info['signature'] : '' ?>" placeholder="请输入署名">
             </div>
         </div>
+        <input type="hidden" name="id" id="id" value="<?php echo isset($info['id']) ? $info['id'] : '' ?>">
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <button id="btnSub" class="btn btn-primary radius" type="button"><i
@@ -85,124 +86,6 @@
     <link rel="stylesheet" type="text/css" href="/js/uploadify/uploadify.css">
 </div>
 <script>
-
-    //    jQuery.validator.addMethod("isMobile", function(value, element) {
-    //        var length = value.length;
-    //        var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
-    //        return this.optional(element) || (length == 11 && mobile.test(value));
-    //    }, "请正确填写您的手机号码");
-    //    jQuery.validator.addMethod("isPassword", function(value, element) {
-    //        var length = value.length;
-    //        var pass = /^([0-9]+)([a-zA-Z]+)([0-9a-zA-Z]*){6,20}$|^([a-zA-Z]+)([0-9]+)([0-9a-zA-Z]*){6,20}$/;
-    //        return this.optional(element) || (length >= 6 && pass.test(value));
-    //    }, "密码必须为6到20位的字母数字组合");
-    //
-    //    jQuery.validator.addMethod("isUsername", function(value, element) {
-    //        var returnVal;
-    //
-    //        $.ajax({
-    //            url: '/Mars/Customer/verification',
-    //            type: 'POST',
-    //            dataType: 'json',
-    //            async: false,
-    //            data: {user_name: value},
-    //            success: function(d) {
-    //                //1存在 0正常
-    //                if(d.ret == 0) {
-    //                    returnVal = true;
-    //                } else {
-    //                    returnVal = false;
-    //                }
-    //            }
-    //        });
-    //        return returnVal
-    //    }, "用户名重复");
-
-    //    jQuery.validator.addMethod("isPhoneNum", function(value, element) {
-    //        var returnVal;
-    //
-    //        $.ajax({
-    //            url: '/Mars/Customer/verification',
-    //            type: 'POST',
-    //            dataType: 'json',
-    //            async: false,
-    //            data: {phone: value},
-    //            success: function(d) {
-    //                //1存在 0正常
-    //                if(d.ret == 0) {
-    //                    returnVal = true;
-    //                } else {
-    //                    returnVal = false;
-    //                }
-    //            }
-    //        });
-    //        return returnVal
-    //    }, "手机号重复");
-    //    jQuery.validator.addMethod("isEmailSame", function(value, element) {
-    //        var returnVal;
-    //
-    //        $.ajax({
-    //            url: '/Mars/Customer/verification',
-    //            type: 'POST',
-    //            dataType: 'json',
-    //            async: false,
-    //            data: {email: value},
-    //            success: function(d) {
-    //                //1存在 0正常
-    //                if(d.ret == 0) {
-    //                    returnVal = true;
-    //                } else {
-    //                    returnVal = false;
-    //                }
-    //            }
-    //        });
-    //        return returnVal
-    //    }, "邮箱重复");
-    //
-    //    var rules = {
-    //        user_name: {
-    //            isUsername: true,
-    //            required: true,
-    //        },
-    //        password: {
-    //            required: true,
-    //            minlength: 6,
-    //            isPassword: true
-    //        },
-    //        repassword : {
-    //            required: true,
-    //            minlength: 6,
-    //            equalTo: "#password"
-    //        },
-    //        contact: "required",
-    //        phone: {
-    //            required: true,
-    //            isMobile: true,
-    //            isPhoneNum: true
-    //        },
-    //        email: {
-    //            required: true,
-    //            email: true,
-    //            isEmailSame: true
-    //        },
-    //        real_name: {
-    //            required: true,
-    //        },
-    //    }
-    //
-    //
-    //    $("#radio1").click(function(){
-    //         $("#company").hide();
-    //        $("#company_name").rules("remove")
-    //    });
-    //    $("#radio2").click(function(){
-    //        $("#company").show();
-    //        $("#company_name").rules("add",{required: true})
-    //    });
-    //    var a = $("#form-article-add").validate({
-    //        rules: rules
-    //    })
-    //    $("#real_name").rules()
     var E = window.wangEditor
     var editor = new E('#editor')
     // 或者 var editor = new E( document.getElementById('#editor') )
@@ -216,6 +99,9 @@
             pic: $("#pic").val().trim(),
             content: editor.txt.html(),
             signature: $("#signature").val().trim(),
+        }
+        if($("#id").val().trim() !==null || $("#id").val().trim() !=='') {
+            data.id = $("#id").val().trim();
         }
         var succ_url='/Mars/article/index';
         if(data.title == ""||data.title ==null||data.title ==undefined) {
@@ -246,7 +132,7 @@
             success: function(d) {
                 if(d.ret == 0) {// 成功
                     layer.open({
-                        content: '添加成功！',
+                        content: d.msg,
                         yes: function(){ location.href=succ_url;}
                     });
                 } else if(d.ret == 1){ //失败一定要 return false
