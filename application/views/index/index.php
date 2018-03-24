@@ -120,7 +120,7 @@
 								<p>最近很多人私下留言给我，问swoole与yii2怎么整合？由于yii2本身就是传统MVC框架的典型代表之一，所以这个问题又可以等同于swoole如何与传统的MVC框架整合，比如la...</p>
 								<a href="/index/single5">Read More...</a>
 								<br><br>
-								<span>11 4, 2017 BY 夕夜<</span><br>
+								<span>11 4, 2017 BY 夕夜</span><br>
 							</div>
 						</div>
 						<div class="box-item">
