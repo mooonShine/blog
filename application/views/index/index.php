@@ -74,7 +74,7 @@
 						<div class="box-item">
 							<img src="/images/1.jpg" class="img-responsive"/>
 							<div class="content">
-								<h3>YII2 操作MongoDb/h3>
+								<h3>YII2 操作MongoDb</h3>
 								<p>1.增$data['id'] = 1;$data['title'] = 'YII2  操作MongoDb';$collec...</p>
 								<a href="/index/single">Read More...</a>
 								<br><br>
@@ -116,7 +116,7 @@
 						<div class="box-item">
 							<img src="/images/4.jpg" class="img-responsive"/>
 							<div class="content">
-								<h3>swoole基础-与传统MVC框架的整合/h3>
+								<h3>swoole基础-与传统MVC框架的整合</h3>
 								<p>最近很多人私下留言给我，问swoole与yii2怎么整合？由于yii2本身就是传统MVC框架的典型代表之一，所以这个问题又可以等同于swoole如何与传统的MVC框架整合，比如la...</p>
 								<a href="/index/single">Read More...</a>
 								<br><br>
@@ -126,7 +126,7 @@
 						<div class="box-item">
 							<img src="/images/8.jpg" class="img-responsive"/>
 							<div class="content">
-								<h3> 支付宝网页授权获取用户信息/h3>
+								<h3> 支付宝网页授权获取用户信息</h3>
 								<p>1. 支付宝生活号申请，申请完成后上传 RSA2(SHA256)密钥2.  URL拼接与scope详解  获取auth_code  （支付宝...</p>
 								<a href="/index/single">Read More...</a>
 								<br><br>
@@ -136,7 +136,7 @@
 						<div class="box-item">
 							<img src="/images/11.jpg" class="img-responsive"/>
 							<div class="content">
-								<h3> 4 swoole基础-IO模型/h3>
+								<h3> 4 swoole基础-IO模型</h3>
 								<p>IO即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要IO接口。通常，IO是相对的。比如说你打开浏览器，通过网络IO获取...IO即Input/Output,输入和输出的意思。在计算机的世界里，涉及到数据交换的地方，比如磁盘、网络等，就需要IO接口。通常，IO是相对的。比如说你打开浏览器，通过网络IO获取...</p>
 								<a href="/index/single">Read More...</a>
 								<br><br>
@@ -158,7 +158,7 @@
 						<div class="box-item">
 							<img src="/images/12.jpg" class="img-responsive"/>
 							<div class="content">
-								<h3>Mysql 主从复制的原理/h3>
+								<h3>Mysql 主从复制的原理</h3>
 								<p>一、什么是主从复制至少需要2台mysql服务器，一台配置为主服务器，一台配置为从服务器，主服务器的数据要同步到从服务器。二、主从复制的原理mysql中有一种日志，叫做bin日志（二...</p>
 								<a href="/index/single">Read More...</a>
 								<br><br>
