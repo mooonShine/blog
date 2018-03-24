@@ -32,6 +32,61 @@ class Controller_Index extends Front
         $this->assign('data', 'sub');
         $this->display('index/single');
     }
+    public function single1Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single1');
+    }
+    public function single2Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single2');
+    }
+    public function single3Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single3');
+    }
+    public function single4Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single4');
+    }
+    public function single5Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single5');
+    }
+    public function single6Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single6');
+    }
+    public function single7Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single7');
+    }
+    public function single8Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single8');
+    }
+    public function single9Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single9');
+    }
+    public function single10Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single10');
+    }
+    public function single11Action()
+    {
+        $this->assign('data', 'sub');
+        $this->display('index/single11');
+    }
     public function archiveAction()
     {
         $this->assign('data', 'sub');
