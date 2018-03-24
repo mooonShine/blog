@@ -30,39 +30,7 @@
 						<div class="art-content">
 							<h1>python 简介</h1>
                         <div class="info">By <a href="#">夕夜</a>11 20, 2017 </div>
-							<div class="excerpt"><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip.</p></div>
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-							 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-							 invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-							<blockquote><p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet vultatup duista.</p></blockquote>
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-							at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.</p>
-							<h2>Heading 1</h2>
-							<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-							 Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse lorem ipsum dolor sit amet.</p>
-							<h2>Heading 2</h2>
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. 
-							 At vero eos et accusam et justo.</p>
-							<h2>Heading 3</h2>
-							<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-							 At vero eos et accusam et justo duo dolores et ea rebum hendrerit in vulputate velit esse molestie.</p>
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-							 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-						
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-							sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-							<div class="note">
-							  <ol>
-								<li>Lorem ipsum</li>
-								<li>Sit amet vultatup nonumy</li>
-								<li>Duista sed diam</li>
-							  </ol>
-							  <div class="clear"></div>
-							</div>
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at 
-							 vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-							 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-							<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores.</p>
+                            <p><strong><span style="font-size:18px">1.python 适合的领域</span></strong></p><p><strong><span style="font-size:18px"><br></span></strong></p><p><span style="font-size:18px">web 网站和各种网络服务</span></p><p><span style="font-size:18px">系统工具和脚本</span></p><p><span style="font-size:18px">作为胶水语言和其他语言开发的模块包装起来方便使用。</span></p><p><span style="font-size:18px"><br></span></p><p><span style="font-size:18px"><strong>2.python不适合的领域</strong></span></p><p><strong></strong>贴近硬件的代码（首选C）<br></p><p>移动开发：IOS/Android有各自的开发语言（objc swift/java)</p><p>游戏开发：C/C++</p><p><br></p><p><strong><span style="font-size:18px">3.python的实际应该</span></strong><br></p><p><span style="font-size:18px">国外 ：YouTube&nbsp;</span></p><p><span style="font-size:18px">国内：豆瓣网 搜狐邮箱</span></p><p>openstack 开源云计算平台</p><p>大公司&nbsp;</p><p>google Yahoo NASA(美国航空航天局）</p><p><br></p><p><strong><span style="font-size:18px">4.python和其他语言的对比</span></strong></p><p><span style="font-size:18px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;类型 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;运算速度 &nbsp; &nbsp; &nbsp; &nbsp; 代码量</span></p><p><span style="font-size:18px">C &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 编译为机器码 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;非常快 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;非常多</span></p><p><span style="font-size:18px">Java &nbsp; &nbsp; &nbsp;<span style="font-size: large; white-space: normal;">编译为字节码 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;快 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;多</span></span></p><p><span style="font-size:18px">Python &nbsp;解释执行 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;慢 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;少</span></p><p>网络应用的瓶颈在 网速 和 数据库 由于CPU性能越来越高所有运输速度可以 忽略不计</p><p><br></p><p><strong><span style="font-size:18px">5.Python 源码不能加密</span></strong></p><p><strong><span style="font-size:18px"><br></span></strong></p>
 						</div>
 					</article>
 					<div class="widget wid-related">
