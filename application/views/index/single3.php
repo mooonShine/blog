@@ -28,8 +28,8 @@
 					<article>
 						<img src="/images/banner1.jpg" />
 						<div class="art-content">
-							<h1>YII2 操作MongoDb</h1>
-							<div class="info">By <a href="#">夕夜</a> 2 10, 2018 </div>
+							<h1>Python 环境搭建</h1>
+							<div class="info">By <a href="#">夕夜</a>11 25, 2017 </div>
 							<div class="excerpt"><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip.</p></div>
 							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 							 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
